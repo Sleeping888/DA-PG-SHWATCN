@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "stv_pgnn_adapted",
+  "validation_call": 16,
+  "val_node_avg_rmse": 155.5198747805277,
+  "best_epoch": 7,
+  "updated_at": "2026-11-20T23:23:32.714533+08:00"
+}

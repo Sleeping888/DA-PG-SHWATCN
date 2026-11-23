@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "controller_pid": 30964,
+  "total": 9,
+  "completed": 9,
+  "concurrency": 2,
+  "started_at": "2026-11-20T22:39:38.337583+08:00",
+  "active": [],
+  "updated_at": "2026-11-20T23:24:00.398611+08:00",
+  "pending": 0,
+  "finished_at": "2026-11-20T23:24:00.400611+08:00"
+}

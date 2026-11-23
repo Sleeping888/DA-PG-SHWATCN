@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "cnn_bilstm",
+  "exit_code": 0,
+  "elapsed_seconds": 750.3357632160187,
+  "finished_at": "2026-11-19T18:25:24.760560+08:00",
+  "summary_sha256": "da9f6bcb4e9b1c99a0922e1cef4c6cb9e68d947852dedf3b6c16c55c1dad676a"
+}

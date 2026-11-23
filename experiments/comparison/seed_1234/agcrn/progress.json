@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "agcrn",
+  "validation_call": 36,
+  "val_node_avg_rmse": 153.9723051602725,
+  "best_epoch": 27,
+  "updated_at": "2026-11-19T20:06:51.179597+08:00"
+}

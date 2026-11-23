@@ -1,0 +1,82 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_84\cnn_lstm
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: cnn_lstm
+################################################################################
+[Cache] verified original preprocessing; {'train': 35075, 'val': 7516, 'test': 7517}
+[cnn_lstm] model=CNN-LSTM, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+[cnn_lstm] epoch 001 | loss=0.023668 | node_loss=0.021950 | farm_loss=0.013210 | val_node_avg_RMSE=167.071 kW | val_farm_avg_RMSE=17066.659 kW
+[cnn_lstm] epoch 002 | loss=0.018973 | node_loss=0.017666 | farm_loss=0.010057 | val_node_avg_RMSE=167.739 kW | val_farm_avg_RMSE=16962.193 kW
+[cnn_lstm] epoch 003 | loss=0.018681 | node_loss=0.017392 | farm_loss=0.009919 | val_node_avg_RMSE=167.618 kW | val_farm_avg_RMSE=17251.895 kW
+[cnn_lstm] epoch 004 | loss=0.018501 | node_loss=0.017224 | farm_loss=0.009819 | val_node_avg_RMSE=164.896 kW | val_farm_avg_RMSE=16637.346 kW
+[cnn_lstm] epoch 005 | loss=0.018397 | node_loss=0.017127 | farm_loss=0.009765 | val_node_avg_RMSE=169.449 kW | val_farm_avg_RMSE=17679.881 kW
+[cnn_lstm] epoch 006 | loss=0.018340 | node_loss=0.017073 | farm_loss=0.009748 | val_node_avg_RMSE=164.162 kW | val_farm_avg_RMSE=16578.471 kW
+[cnn_lstm] epoch 007 | loss=0.018249 | node_loss=0.016988 | farm_loss=0.009701 | val_node_avg_RMSE=165.014 kW | val_farm_avg_RMSE=16812.100 kW
+[cnn_lstm] epoch 008 | loss=0.018157 | node_loss=0.016905 | farm_loss=0.009624 | val_node_avg_RMSE=164.710 kW | val_farm_avg_RMSE=16592.579 kW
+[cnn_lstm] epoch 009 | loss=0.018106 | node_loss=0.016858 | farm_loss=0.009604 | val_node_avg_RMSE=164.952 kW | val_farm_avg_RMSE=16539.446 kW
+[cnn_lstm] epoch 010 | loss=0.018069 | node_loss=0.016824 | farm_loss=0.009576 | val_node_avg_RMSE=165.752 kW | val_farm_avg_RMSE=16977.448 kW
+[cnn_lstm] epoch 011 | loss=0.018008 | node_loss=0.016768 | farm_loss=0.009543 | val_node_avg_RMSE=164.169 kW | val_farm_avg_RMSE=16672.596 kW
+[cnn_lstm] epoch 012 | loss=0.018010 | node_loss=0.016768 | farm_loss=0.009557 | val_node_avg_RMSE=165.639 kW | val_farm_avg_RMSE=16871.087 kW
+[cnn_lstm] epoch 013 | loss=0.017966 | node_loss=0.016730 | farm_loss=0.009505 | val_node_avg_RMSE=164.341 kW | val_farm_avg_RMSE=16564.789 kW
+[cnn_lstm] epoch 014 | loss=0.017891 | node_loss=0.016661 | farm_loss=0.009457 | val_node_avg_RMSE=164.085 kW | val_farm_avg_RMSE=16433.020 kW
+[cnn_lstm] epoch 015 | loss=0.017922 | node_loss=0.016689 | farm_loss=0.009486 | val_node_avg_RMSE=163.818 kW | val_farm_avg_RMSE=16450.820 kW
+[cnn_lstm] epoch 016 | loss=0.017876 | node_loss=0.016647 | farm_loss=0.009448 | val_node_avg_RMSE=165.343 kW | val_farm_avg_RMSE=16658.347 kW
+[cnn_lstm] epoch 017 | loss=0.017860 | node_loss=0.016633 | farm_loss=0.009438 | val_node_avg_RMSE=164.576 kW | val_farm_avg_RMSE=16542.679 kW
+[cnn_lstm] epoch 018 | loss=0.017848 | node_loss=0.016622 | farm_loss=0.009432 | val_node_avg_RMSE=163.984 kW | val_farm_avg_RMSE=16340.084 kW
+[cnn_lstm] epoch 019 | loss=0.017829 | node_loss=0.016606 | farm_loss=0.009408 | val_node_avg_RMSE=163.685 kW | val_farm_avg_RMSE=16434.761 kW
+[cnn_lstm] epoch 020 | loss=0.017790 | node_loss=0.016570 | farm_loss=0.009383 | val_node_avg_RMSE=164.512 kW | val_farm_avg_RMSE=16723.270 kW
+[cnn_lstm] epoch 021 | loss=0.017761 | node_loss=0.016545 | farm_loss=0.009357 | val_node_avg_RMSE=164.357 kW | val_farm_avg_RMSE=16700.923 kW
+[cnn_lstm] epoch 022 | loss=0.017778 | node_loss=0.016559 | farm_loss=0.009380 | val_node_avg_RMSE=163.713 kW | val_farm_avg_RMSE=16544.235 kW
+[cnn_lstm] epoch 023 | loss=0.017745 | node_loss=0.016529 | farm_loss=0.009360 | val_node_avg_RMSE=164.231 kW | val_farm_avg_RMSE=16542.946 kW
+[cnn_lstm] epoch 024 | loss=0.017739 | node_loss=0.016523 | farm_loss=0.009353 | val_node_avg_RMSE=164.705 kW | val_farm_avg_RMSE=16654.918 kW
+[cnn_lstm] epoch 025 | loss=0.017747 | node_loss=0.016530 | farm_loss=0.009360 | val_node_avg_RMSE=163.878 kW | val_farm_avg_RMSE=16434.235 kW
+[cnn_lstm] epoch 026 | loss=0.017710 | node_loss=0.016497 | farm_loss=0.009328 | val_node_avg_RMSE=164.145 kW | val_farm_avg_RMSE=16624.761 kW
+[cnn_lstm] epoch 027 | loss=0.017744 | node_loss=0.016529 | farm_loss=0.009350 | val_node_avg_RMSE=163.670 kW | val_farm_avg_RMSE=16536.306 kW
+[cnn_lstm] epoch 028 | loss=0.017674 | node_loss=0.016464 | farm_loss=0.009301 | val_node_avg_RMSE=163.736 kW | val_farm_avg_RMSE=16420.034 kW
+[cnn_lstm] epoch 029 | loss=0.017677 | node_loss=0.016467 | farm_loss=0.009307 | val_node_avg_RMSE=164.305 kW | val_farm_avg_RMSE=16398.562 kW
+[cnn_lstm] epoch 030 | loss=0.017641 | node_loss=0.016436 | farm_loss=0.009275 | val_node_avg_RMSE=163.640 kW | val_farm_avg_RMSE=16343.188 kW
+[cnn_lstm] epoch 031 | loss=0.017656 | node_loss=0.016449 | farm_loss=0.009288 | val_node_avg_RMSE=163.891 kW | val_farm_avg_RMSE=16534.150 kW
+[cnn_lstm] epoch 032 | loss=0.017630 | node_loss=0.016426 | farm_loss=0.009262 | val_node_avg_RMSE=163.602 kW | val_farm_avg_RMSE=16428.684 kW
+[cnn_lstm] epoch 033 | loss=0.017632 | node_loss=0.016426 | farm_loss=0.009276 | val_node_avg_RMSE=163.952 kW | val_farm_avg_RMSE=16505.895 kW
+[cnn_lstm] epoch 034 | loss=0.017627 | node_loss=0.016423 | farm_loss=0.009262 | val_node_avg_RMSE=163.519 kW | val_farm_avg_RMSE=16347.971 kW
+[cnn_lstm] epoch 035 | loss=0.017603 | node_loss=0.016401 | farm_loss=0.009246 | val_node_avg_RMSE=164.177 kW | val_farm_avg_RMSE=16562.314 kW
+[cnn_lstm] epoch 036 | loss=0.017612 | node_loss=0.016409 | farm_loss=0.009251 | val_node_avg_RMSE=163.773 kW | val_farm_avg_RMSE=16444.281 kW
+[cnn_lstm] epoch 037 | loss=0.017585 | node_loss=0.016385 | farm_loss=0.009231 | val_node_avg_RMSE=163.896 kW | val_farm_avg_RMSE=16402.822 kW
+[cnn_lstm] epoch 038 | loss=0.017567 | node_loss=0.016368 | farm_loss=0.009220 | val_node_avg_RMSE=163.692 kW | val_farm_avg_RMSE=16341.441 kW
+[cnn_lstm] epoch 039 | loss=0.017559 | node_loss=0.016362 | farm_loss=0.009212 | val_node_avg_RMSE=164.992 kW | val_farm_avg_RMSE=16629.687 kW
+[cnn_lstm] epoch 040 | loss=0.017598 | node_loss=0.016397 | farm_loss=0.009236 | val_node_avg_RMSE=164.150 kW | val_farm_avg_RMSE=16351.984 kW
+[cnn_lstm] epoch 041 | loss=0.017558 | node_loss=0.016361 | farm_loss=0.009205 | val_node_avg_RMSE=164.016 kW | val_farm_avg_RMSE=16513.997 kW
+[cnn_lstm] epoch 042 | loss=0.017566 | node_loss=0.016368 | farm_loss=0.009215 | val_node_avg_RMSE=164.083 kW | val_farm_avg_RMSE=16511.608 kW
+[cnn_lstm] early stop at epoch 42
+[cnn_lstm] Test h1 node RMSE=66.796, MAE=35.516, nRMSE=4.453%, nMAE=2.368%, WAPE=15.811%, R2=0.9624
+[cnn_lstm] Test h1 farm RMSE=4331.532, MAE=2363.056, nRMSE=2.155%, nMAE=1.176%, WAPE=7.851%, R2=0.9902
+[cnn_lstm] Test h2 node RMSE=91.991, MAE=49.605, nRMSE=6.133%, nMAE=3.307%, WAPE=22.085%, R2=0.9286
+[cnn_lstm] Test h2 farm RMSE=7295.473, MAE=3975.595, nRMSE=3.630%, nMAE=1.978%, WAPE=13.209%, R2=0.9723
+[cnn_lstm] Test h3 node RMSE=108.825, MAE=60.636, nRMSE=7.255%, nMAE=4.042%, WAPE=26.999%, R2=0.9001
+[cnn_lstm] Test h3 farm RMSE=9548.863, MAE=5422.779, nRMSE=4.751%, nMAE=2.698%, WAPE=18.019%, R2=0.9525
+[cnn_lstm] Test h4 node RMSE=122.644, MAE=71.168, nRMSE=8.176%, nMAE=4.745%, WAPE=31.691%, R2=0.8731
+[cnn_lstm] Test h4 farm RMSE=11470.477, MAE=6915.445, nRMSE=5.707%, nMAE=3.441%, WAPE=22.981%, R2=0.9314
+[cnn_lstm] Test h5 node RMSE=134.075, MAE=80.554, nRMSE=8.938%, nMAE=5.370%, WAPE=35.873%, R2=0.8484
+[cnn_lstm] Test h5 farm RMSE=13123.584, MAE=8229.111, nRMSE=6.529%, nMAE=4.094%, WAPE=27.348%, R2=0.9102
+[cnn_lstm] Test h6 node RMSE=144.819, MAE=90.357, nRMSE=9.655%, nMAE=6.024%, WAPE=40.241%, R2=0.8231
+[cnn_lstm] Test h6 farm RMSE=14683.322, MAE=9602.311, nRMSE=7.305%, nMAE=4.777%, WAPE=31.914%, R2=0.8876
+[cnn_lstm] Test AVG node RMSE=114.570, MAE=64.639, nRMSE=7.638%, nMAE=4.309%, WAPE=28.782%, R2=0.8893
+[cnn_lstm] Test AVG farm RMSE=10665.889, MAE=6084.716, nRMSE=5.306%, nMAE=3.027%, WAPE=20.219%, R2=0.9407
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+    case    model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE    farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+cnn_lstm CNN-LSTM     t+1  66.796269 35.515770       4.453085      2.367718     15.810716 0.962365  4331.532326 2363.055792       2.154991      1.175650      7.850539 0.990221
+cnn_lstm CNN-LSTM     t+2  91.990878 49.605049       6.132725      3.307003     22.085166 0.928623  7295.472672 3975.595151       3.629588      1.977908     13.209067 0.972259
+cnn_lstm CNN-LSTM     t+3 108.824805 60.635977       7.254987      4.042398     26.998906 0.900114  9548.863198 5422.779093       4.750678      2.697900     18.019092 0.952479
+cnn_lstm CNN-LSTM     t+4 122.644114 71.167901       8.176274      4.744527     31.691123 0.873140 11470.476576 6915.445444       5.706705      3.440520     22.980995 0.931431
+cnn_lstm CNN-LSTM     t+5 134.075485 80.553517       8.938366      5.370234     35.873071 0.848395 13123.583802 8229.110880       6.529146      4.094085     27.348415 0.910247
+cnn_lstm CNN-LSTM     t+6 144.818504 90.356778       9.654567      6.023785     40.241286 0.823133 14683.321848 9602.310519       7.305135      4.777269     31.914060 0.887649
+cnn_lstm CNN-LSTM     avg 114.569568 64.639166       7.637971      4.309278     28.782200 0.889292 10665.888561 6084.716098       5.306412      3.027222     20.219191 0.940711
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_84\cnn_lstm\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_84\cnn_lstm\summary_results_by_horizon.csv
+================================================================================

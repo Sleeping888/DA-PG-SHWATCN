@@ -1,0 +1,8 @@
+{
+  "seed": 84,
+  "model": "full",
+  "validation_call": 38,
+  "val_node_avg_rmse": 140.34067450858583,
+  "best_epoch": 29,
+  "updated_at": "2026-11-19T17:24:52.845662+08:00"
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "cnn_lstm",
+  "exit_code": 0,
+  "elapsed_seconds": 610.2663865089417,
+  "finished_at": "2026-11-19T17:49:13.406897+08:00",
+  "summary_sha256": "f65ade4d2ef4fbfa66f8a508222c58072fd833648505048592f48f0cf6565fe2"
+}

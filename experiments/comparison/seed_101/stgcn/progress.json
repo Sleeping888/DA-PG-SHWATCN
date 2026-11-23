@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "stgcn",
+  "validation_call": 15,
+  "val_node_avg_rmse": 163.80818203832084,
+  "best_epoch": 6,
+  "updated_at": "2026-11-20T23:11:01.340465+08:00"
+}

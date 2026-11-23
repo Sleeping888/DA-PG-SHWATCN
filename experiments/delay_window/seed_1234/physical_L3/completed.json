@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "physical_L3",
+  "exit_code": 0,
+  "elapsed_seconds": 685.3228628635406,
+  "finished_at": "2026-11-22T15:52:04.571032+08:00",
+  "summary_sha256": "73da14ed18d524e16218fcd0780a64516ae7db862e1108d5f824a5b21dc08676"
+}

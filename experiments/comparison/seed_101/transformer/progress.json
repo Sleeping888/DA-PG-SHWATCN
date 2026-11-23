@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "transformer",
+  "validation_call": 11,
+  "val_node_avg_rmse": 164.81941801459345,
+  "best_epoch": 2,
+  "updated_at": "2026-11-20T23:07:07.975520+08:00"
+}

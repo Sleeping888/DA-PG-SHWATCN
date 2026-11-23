@@ -1,0 +1,77 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_84\full
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: full
+################################################################################
+[Cache] verified original preprocessing; {'train': 35075, 'val': 7516, 'test': 7517}
+[full] model=TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+[full] epoch 001 | loss=0.022030 | node_loss=0.020371 | farm_loss=0.012758 | val_node_avg_RMSE=152.306 kW | val_farm_avg_RMSE=14678.856 kW
+[full] epoch 002 | loss=0.015627 | node_loss=0.014595 | farm_loss=0.007943 | val_node_avg_RMSE=151.851 kW | val_farm_avg_RMSE=15043.397 kW
+[full] epoch 003 | loss=0.014937 | node_loss=0.013959 | farm_loss=0.007526 | val_node_avg_RMSE=148.202 kW | val_farm_avg_RMSE=14517.736 kW
+[full] epoch 004 | loss=0.014507 | node_loss=0.013560 | farm_loss=0.007284 | val_node_avg_RMSE=145.784 kW | val_farm_avg_RMSE=14205.996 kW
+[full] epoch 005 | loss=0.014247 | node_loss=0.013318 | farm_loss=0.007142 | val_node_avg_RMSE=146.407 kW | val_farm_avg_RMSE=14282.345 kW
+[full] epoch 006 | loss=0.014023 | node_loss=0.013112 | farm_loss=0.007009 | val_node_avg_RMSE=145.871 kW | val_farm_avg_RMSE=14122.729 kW
+[full] epoch 007 | loss=0.013908 | node_loss=0.013003 | farm_loss=0.006962 | val_node_avg_RMSE=144.074 kW | val_farm_avg_RMSE=14002.615 kW
+[full] epoch 008 | loss=0.013745 | node_loss=0.012854 | farm_loss=0.006855 | val_node_avg_RMSE=143.578 kW | val_farm_avg_RMSE=13891.533 kW
+[full] epoch 009 | loss=0.013667 | node_loss=0.012781 | farm_loss=0.006819 | val_node_avg_RMSE=143.556 kW | val_farm_avg_RMSE=13880.757 kW
+[full] epoch 010 | loss=0.013612 | node_loss=0.012728 | farm_loss=0.006798 | val_node_avg_RMSE=144.411 kW | val_farm_avg_RMSE=14124.140 kW
+[full] epoch 011 | loss=0.013481 | node_loss=0.012608 | farm_loss=0.006713 | val_node_avg_RMSE=145.607 kW | val_farm_avg_RMSE=14232.125 kW
+[full] epoch 012 | loss=0.013420 | node_loss=0.012555 | farm_loss=0.006655 | val_node_avg_RMSE=145.416 kW | val_farm_avg_RMSE=14243.695 kW
+[full] epoch 013 | loss=0.013353 | node_loss=0.012492 | farm_loss=0.006629 | val_node_avg_RMSE=144.671 kW | val_farm_avg_RMSE=14168.052 kW
+[full] epoch 014 | loss=0.013279 | node_loss=0.012422 | farm_loss=0.006590 | val_node_avg_RMSE=143.303 kW | val_farm_avg_RMSE=13991.341 kW
+[full] epoch 015 | loss=0.013189 | node_loss=0.012338 | farm_loss=0.006541 | val_node_avg_RMSE=141.539 kW | val_farm_avg_RMSE=13757.999 kW
+[full] epoch 016 | loss=0.013107 | node_loss=0.012262 | farm_loss=0.006501 | val_node_avg_RMSE=143.650 kW | val_farm_avg_RMSE=14093.741 kW
+[full] epoch 017 | loss=0.013036 | node_loss=0.012197 | farm_loss=0.006453 | val_node_avg_RMSE=142.791 kW | val_farm_avg_RMSE=13942.503 kW
+[full] epoch 018 | loss=0.012941 | node_loss=0.012110 | farm_loss=0.006388 | val_node_avg_RMSE=142.149 kW | val_farm_avg_RMSE=13879.507 kW
+[full] epoch 019 | loss=0.012913 | node_loss=0.012084 | farm_loss=0.006373 | val_node_avg_RMSE=142.944 kW | val_farm_avg_RMSE=14000.657 kW
+[full] epoch 020 | loss=0.012861 | node_loss=0.012040 | farm_loss=0.006321 | val_node_avg_RMSE=143.007 kW | val_farm_avg_RMSE=14071.685 kW
+[full] epoch 021 | loss=0.012834 | node_loss=0.012013 | farm_loss=0.006317 | val_node_avg_RMSE=141.017 kW | val_farm_avg_RMSE=13691.739 kW
+[full] epoch 022 | loss=0.012745 | node_loss=0.011931 | farm_loss=0.006264 | val_node_avg_RMSE=140.634 kW | val_farm_avg_RMSE=13705.795 kW
+[full] epoch 023 | loss=0.012781 | node_loss=0.011963 | farm_loss=0.006298 | val_node_avg_RMSE=141.718 kW | val_farm_avg_RMSE=13903.064 kW
+[full] epoch 024 | loss=0.012714 | node_loss=0.011903 | farm_loss=0.006246 | val_node_avg_RMSE=140.864 kW | val_farm_avg_RMSE=13717.838 kW
+[full] epoch 025 | loss=0.012632 | node_loss=0.011829 | farm_loss=0.006179 | val_node_avg_RMSE=141.894 kW | val_farm_avg_RMSE=13905.547 kW
+[full] epoch 026 | loss=0.012588 | node_loss=0.011789 | farm_loss=0.006147 | val_node_avg_RMSE=142.046 kW | val_farm_avg_RMSE=13931.424 kW
+[full] epoch 027 | loss=0.012564 | node_loss=0.011765 | farm_loss=0.006141 | val_node_avg_RMSE=142.949 kW | val_farm_avg_RMSE=14126.042 kW
+[full] epoch 028 | loss=0.012494 | node_loss=0.011702 | farm_loss=0.006095 | val_node_avg_RMSE=141.955 kW | val_farm_avg_RMSE=13955.378 kW
+[full] epoch 029 | loss=0.012455 | node_loss=0.011666 | farm_loss=0.006073 | val_node_avg_RMSE=140.341 kW | val_farm_avg_RMSE=13726.515 kW
+[full] epoch 030 | loss=0.012415 | node_loss=0.011627 | farm_loss=0.006068 | val_node_avg_RMSE=141.786 kW | val_farm_avg_RMSE=13955.736 kW
+[full] epoch 031 | loss=0.012392 | node_loss=0.011606 | farm_loss=0.006045 | val_node_avg_RMSE=140.356 kW | val_farm_avg_RMSE=13713.755 kW
+[full] epoch 032 | loss=0.012359 | node_loss=0.011576 | farm_loss=0.006022 | val_node_avg_RMSE=141.610 kW | val_farm_avg_RMSE=13911.402 kW
+[full] epoch 033 | loss=0.012381 | node_loss=0.011596 | farm_loss=0.006041 | val_node_avg_RMSE=140.934 kW | val_farm_avg_RMSE=13825.144 kW
+[full] epoch 034 | loss=0.012320 | node_loss=0.011540 | farm_loss=0.006001 | val_node_avg_RMSE=141.830 kW | val_farm_avg_RMSE=13935.278 kW
+[full] epoch 035 | loss=0.012262 | node_loss=0.011490 | farm_loss=0.005940 | val_node_avg_RMSE=141.626 kW | val_farm_avg_RMSE=13933.230 kW
+[full] epoch 036 | loss=0.012299 | node_loss=0.011522 | farm_loss=0.005973 | val_node_avg_RMSE=141.651 kW | val_farm_avg_RMSE=13936.993 kW
+[full] epoch 037 | loss=0.012244 | node_loss=0.011473 | farm_loss=0.005932 | val_node_avg_RMSE=140.540 kW | val_farm_avg_RMSE=13741.993 kW
+[full] early stop at epoch 37
+[full] Test h1 node RMSE=59.483, MAE=32.377, nRMSE=3.966%, nMAE=2.158%, WAPE=14.413%, R2=0.9702
+[full] Test h1 farm RMSE=3331.276, MAE=2024.731, nRMSE=1.657%, nMAE=1.007%, WAPE=6.727%, R2=0.9942
+[full] Test h2 node RMSE=78.321, MAE=42.605, nRMSE=5.221%, nMAE=2.840%, WAPE=18.969%, R2=0.9483
+[full] Test h2 farm RMSE=5588.345, MAE=3046.351, nRMSE=2.780%, nMAE=1.516%, WAPE=10.122%, R2=0.9837
+[full] Test h3 node RMSE=95.998, MAE=53.433, nRMSE=6.400%, nMAE=3.562%, WAPE=23.792%, R2=0.9223
+[full] Test h3 farm RMSE=8262.833, MAE=4508.721, nRMSE=4.111%, nMAE=2.243%, WAPE=14.982%, R2=0.9644
+[full] Test h4 node RMSE=110.091, MAE=62.313, nRMSE=7.339%, nMAE=4.154%, WAPE=27.748%, R2=0.8978
+[full] Test h4 farm RMSE=10291.127, MAE=5760.361, nRMSE=5.120%, nMAE=2.866%, WAPE=19.142%, R2=0.9448
+[full] Test h5 node RMSE=121.417, MAE=70.251, nRMSE=8.094%, nMAE=4.683%, WAPE=31.285%, R2=0.8757
+[full] Test h5 farm RMSE=11897.702, MAE=6907.736, nRMSE=5.919%, nMAE=3.437%, WAPE=22.957%, R2=0.9262
+[full] Test h6 node RMSE=131.905, MAE=78.323, nRMSE=8.794%, nMAE=5.222%, WAPE=34.882%, R2=0.8533
+[full] Test h6 farm RMSE=13400.592, MAE=8069.809, nRMSE=6.667%, nMAE=4.015%, WAPE=26.821%, R2=0.9064
+[full] Test AVG node RMSE=102.591, MAE=56.550, nRMSE=6.839%, nMAE=3.770%, WAPE=25.180%, R2=0.9112
+[full] Test AVG farm RMSE=9466.079, MAE=5052.951, nRMSE=4.709%, nMAE=2.514%, WAPE=16.791%, R2=0.9533
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+case                                         model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE    farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     t+1  59.482624 32.376788       3.965508      2.158453     14.413322 0.970155  3331.275873 2024.731345       1.657351      1.007329      6.726558 0.994216
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     t+2  78.321348 42.604868       5.221423      2.840325     18.968544 0.948260  5588.345158 3046.351124       2.780271      1.515598     10.121618 0.983723
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     t+3  95.998098 53.432802       6.399873      3.562187     23.791605 0.922272  8262.833425 4508.720554       4.110862      2.243145     14.981811 0.964417
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     t+4 110.090731 62.312833       7.339382      4.154189     27.747954 0.897781 10291.127376 5760.360946       5.119964      2.865851     19.142487 0.944806
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     t+5 121.417375 70.251091       8.094492      4.683406     31.285069 0.875670 11897.701561 6907.736444       5.919255      3.436685     22.956993 0.926231
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     t+6 131.904897 78.322571       8.793660      5.221505     34.881733 0.853269 13400.592430 8069.808513       6.666961      4.014830     26.820665 0.906421
+full TCN-DelayPhysSoftHeteroWakeGAT-AdaptiveFusion     avg 102.590692 56.550159       6.839379      3.770011     25.180368 0.911232  9466.078714 5052.951466       4.709492      2.513906     16.790691 0.953300
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_84\full\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_84\full\summary_results_by_horizon.csv
+================================================================================

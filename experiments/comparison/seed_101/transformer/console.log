@@ -1,0 +1,52 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_101_20261120_223936\seed_101\transformer
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: transformer
+################################################################################
+[Cache] verified original preprocessing; {'train': 35075, 'val': 7516, 'test': 7517}
+[transformer] model=Transformer, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+C:\Users\Administrator\Desktop\project_root\.venv\Lib\site-packages\torch\nn\functional.py:5560: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:555.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+[transformer] epoch 001 | loss=0.022319 | node_loss=0.020756 | farm_loss=0.012024 | val_node_avg_RMSE=169.233 kW | val_farm_avg_RMSE=17300.795 kW
+[transformer] epoch 002 | loss=0.018914 | node_loss=0.017609 | farm_loss=0.010043 | val_node_avg_RMSE=164.819 kW | val_farm_avg_RMSE=16646.055 kW
+[transformer] epoch 003 | loss=0.018648 | node_loss=0.017358 | farm_loss=0.009928 | val_node_avg_RMSE=164.943 kW | val_farm_avg_RMSE=16593.077 kW
+[transformer] epoch 004 | loss=0.018530 | node_loss=0.017243 | farm_loss=0.009901 | val_node_avg_RMSE=166.214 kW | val_farm_avg_RMSE=16816.605 kW
+[transformer] epoch 005 | loss=0.018427 | node_loss=0.017147 | farm_loss=0.009840 | val_node_avg_RMSE=166.609 kW | val_farm_avg_RMSE=17047.114 kW
+[transformer] epoch 006 | loss=0.018269 | node_loss=0.017002 | farm_loss=0.009742 | val_node_avg_RMSE=167.815 kW | val_farm_avg_RMSE=17251.035 kW
+[transformer] epoch 007 | loss=0.018231 | node_loss=0.016966 | farm_loss=0.009724 | val_node_avg_RMSE=166.740 kW | val_farm_avg_RMSE=17048.630 kW
+[transformer] epoch 008 | loss=0.018159 | node_loss=0.016902 | farm_loss=0.009666 | val_node_avg_RMSE=165.953 kW | val_farm_avg_RMSE=16957.656 kW
+[transformer] epoch 009 | loss=0.018099 | node_loss=0.016848 | farm_loss=0.009621 | val_node_avg_RMSE=165.663 kW | val_farm_avg_RMSE=16584.285 kW
+[transformer] epoch 010 | loss=0.018077 | node_loss=0.016828 | farm_loss=0.009604 | val_node_avg_RMSE=166.913 kW | val_farm_avg_RMSE=16696.549 kW
+[transformer] early stop at epoch 10
+[transformer] Test h1 node RMSE=67.992, MAE=38.887, nRMSE=4.533%, nMAE=2.592%, WAPE=17.312%, R2=0.9610
+[transformer] Test h1 farm RMSE=4563.928, MAE=2839.583, nRMSE=2.271%, nMAE=1.413%, WAPE=9.434%, R2=0.9891
+[transformer] Test h2 node RMSE=92.794, MAE=53.913, nRMSE=6.186%, nMAE=3.594%, WAPE=24.003%, R2=0.9274
+[transformer] Test h2 farm RMSE=7596.440, MAE=4690.076, nRMSE=3.779%, nMAE=2.333%, WAPE=15.583%, R2=0.9699
+[transformer] Test h3 node RMSE=109.860, MAE=64.410, nRMSE=7.324%, nMAE=4.294%, WAPE=28.679%, R2=0.8982
+[transformer] Test h3 farm RMSE=9957.083, MAE=6113.767, nRMSE=4.954%, nMAE=3.042%, WAPE=20.315%, R2=0.9483
+[transformer] Test h4 node RMSE=123.218, MAE=73.155, nRMSE=8.215%, nMAE=4.877%, WAPE=32.576%, R2=0.8719
+[transformer] Test h4 farm RMSE=11780.920, MAE=7315.813, nRMSE=5.861%, nMAE=3.640%, WAPE=24.311%, R2=0.9277
+[transformer] Test h5 node RMSE=134.033, MAE=81.234, nRMSE=8.936%, nMAE=5.416%, WAPE=36.176%, R2=0.8485
+[transformer] Test h5 farm RMSE=13288.723, MAE=8396.765, nRMSE=6.611%, nMAE=4.177%, WAPE=27.906%, R2=0.9080
+[transformer] Test h6 node RMSE=143.913, MAE=87.500, nRMSE=9.594%, nMAE=5.833%, WAPE=38.969%, R2=0.8253
+[transformer] Test h6 farm RMSE=14706.664, MAE=9268.060, nRMSE=7.317%, nMAE=4.611%, WAPE=30.803%, R2=0.8873
+[transformer] Test AVG node RMSE=114.863, MAE=66.517, nRMSE=7.658%, nMAE=4.434%, WAPE=29.618%, R2=0.8887
+[transformer] Test AVG farm RMSE=10873.094, MAE=6437.344, nRMSE=5.409%, nMAE=3.203%, WAPE=21.391%, R2=0.9384
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+       case       model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE    farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+transformer Transformer     t+1  67.991983 38.887022       4.532799      2.592468     17.311512 0.961005  4563.928259 2839.582964       2.270611      1.412728      9.433657 0.989143
+transformer Transformer     t+2  92.794476 53.913195       6.186298      3.594213     24.003239 0.927370  7596.439518 4690.076488       3.779323      2.333371     15.582958 0.969923
+transformer Transformer     t+3 109.860055 64.410007       7.324004      4.294000     28.679339 0.898204  9957.082608 6113.767359       4.953772      3.041675     20.315144 0.948329
+transformer Transformer     t+4 123.218433 73.155017       8.214562      4.877001     32.575987 0.871949 11780.920229 7315.812934       5.861154      3.639708     24.311472 0.927669
+transformer Transformer     t+5 134.033044 81.234414       8.935536      5.415628     36.176296 0.848491 13288.722795 8396.765293       6.611305      4.177495     27.905594 0.907974
+transformer Transformer     t+6 143.913277 87.499876       9.594218      5.833325     38.968936 0.825337 14706.663629 9268.059977       7.316748      4.610975     30.803151 0.887291
+transformer Transformer     avg 114.863417 66.516588       7.657561      4.434439     29.618170 0.888723 10873.093590 6437.344120       5.409499      3.202659     21.390955 0.938385
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_101_20261120_223936\seed_101\transformer\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_101_20261120_223936\seed_101\transformer\summary_results_by_horizon.csv
+================================================================================

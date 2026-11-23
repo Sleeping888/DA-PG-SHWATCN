@@ -1,0 +1,8 @@
+{
+  "seed": 84,
+  "model": "agcrn",
+  "exit_code": 0,
+  "elapsed_seconds": 185.0827374458313,
+  "finished_at": "2026-11-19T20:11:25.943266+08:00",
+  "summary_sha256": "f71a6a75925f3e6400b47690feb305dd77b0862d7db41a3eec7cd78769d5e251"
+}

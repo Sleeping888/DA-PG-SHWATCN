@@ -1,0 +1,21 @@
+{
+  "status": "curated_pending_upload",
+  "comparison_runs": 27,
+  "delay_window_runs": 18,
+  "total_runs": 45,
+  "primary_paper_seeds": [
+    84,
+    101,
+    1234
+  ],
+  "other_comparison_seeds": [],
+  "source_sha256": "dfe51c281204fd9a2a0aba748bff0608435b3e4df311d9067cccf36eafe0f157",
+  "target_shape": [
+    7517,
+    134,
+    6
+  ],
+  "raw_valid_target_pairs": 3753533,
+  "raw_complete_farm_pairs": 8541,
+  "release_created_at": "2026-11-23T15:28:41.914132"
+}

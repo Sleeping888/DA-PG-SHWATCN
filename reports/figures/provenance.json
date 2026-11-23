@@ -1,0 +1,47 @@
+{
+  "seeds": [
+    84,
+    101,
+    1234
+  ],
+  "models": [
+    "full",
+    "lstm",
+    "cnn_lstm",
+    "cnn_bilstm",
+    "transformer",
+    "dbfp_net",
+    "stgcn",
+    "agcrn",
+    "stv_pgnn_adapted"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\project_root\\原始有效标签与缺失分层_84_101_1234_20261122\\per_horizon_metrics.json",
+      "sha256": "4fc5635c827226c18cabf451726355a2177dd474e971be869972633a5363da83"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\project_root\\原始有效标签与缺失分层_84_101_1234_20261122\\coverage.json",
+      "sha256": "9d95b8eb108f1a89b0c991875defe79f7b7c2b472d05f7d6438719496805734d"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\all_horizons_per_seed.csv",
+      "sha256": "093095f9b047b63c12d558b2ef28262c8909d8aab3ccddbb49a33a50a866a05f"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\all_horizons_per_seed.csv",
+      "sha256": "c49ebfba8c541d4ce92e65bb8b6aaa877ce1837cacbec4c0c9bd6033121452c6"
+    }
+  ],
+  "reference_svg": {
+    "path": "C:/Users/Administrator/Downloads/figure_compare_py.svg",
+    "sha256": "719da911a0aceabf9d8dd6e6ddf1a97d7cff0cc25796b5193cd15c6687ba9062"
+  },
+  "builder_sha256": "9583835c77fc52a72b281d8ff2df05c968997c55a9af3ae98e5f1762122e922e",
+  "errorbars": "sample SD; ddof=1; n=3",
+  "dimensions_mm": [
+    182.88,
+    133.35
+  ],
+  "raster_dpi": 600
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "fixed20_L13",
+  "exit_code": 0,
+  "elapsed_seconds": 1075.5019929409027,
+  "finished_at": "2026-11-22T18:52:51.240250+08:00",
+  "summary_sha256": "496473832bcc567eeb91936cb063ddb4d76f340d5fb7acfaa945dba478c2f1e1"
+}

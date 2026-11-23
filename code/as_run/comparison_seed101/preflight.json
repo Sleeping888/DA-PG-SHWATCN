@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "source_exactly_matches_previous": true,
+  "raw_data_hashes_match_previous": true,
+  "all_cached_array_hashes_match_previous": true,
+  "previous_preflight_sha256": "2cc3bec12357dc4ea4565df5de146e19a1fa1c982cacbd62bedca229b92f2b1a",
+  "training_unchanged": true,
+  "controller_generalized_for_single_seed": true
+}

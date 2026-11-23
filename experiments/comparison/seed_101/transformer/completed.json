@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "transformer",
+  "exit_code": 0,
+  "elapsed_seconds": 410.2320020198822,
+  "finished_at": "2026-11-20T23:07:34.610760+08:00",
+  "summary_sha256": "49d7d0e8ce2c0849cbe079cddc92e2ac97c1eec6e931f47fc8b5aad95e7edf5e"
+}

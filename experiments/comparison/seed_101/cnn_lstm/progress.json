@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "cnn_lstm",
+  "validation_call": 21,
+  "val_node_avg_rmse": 163.79134905805248,
+  "best_epoch": 12,
+  "updated_at": "2026-11-20T22:57:29.637597+08:00"
+}

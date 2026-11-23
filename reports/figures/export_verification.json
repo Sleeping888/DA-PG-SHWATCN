@@ -1,0 +1,54 @@
+{
+  "Fig_comparison_observed": {
+    "png": {
+      "size": [
+        4320,
+        3150
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "bytes": 1033985
+    },
+    "tiff": {
+      "size": [
+        4320,
+        3150
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "bytes": 1653106
+    },
+    "pdf_font_embedded": true,
+    "svg_raster_image_count": 0
+  },
+  "Fig_comparison_original_protocol": {
+    "png": {
+      "size": [
+        4320,
+        3150
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "bytes": 1054480
+    },
+    "tiff": {
+      "size": [
+        4320,
+        3150
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "bytes": 1687898
+    },
+    "pdf_font_embedded": true,
+    "svg_raster_image_count": 0
+  }
+}

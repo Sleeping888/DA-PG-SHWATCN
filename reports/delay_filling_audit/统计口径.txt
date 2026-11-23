@@ -1,0 +1,17 @@
+实际对比模型的延迟与填充统计
+样本数50108；有效物理边实例1413208。
+分母为各样本保留的非零物理边实例，不包括dummy self和空邻居槽；跨随机种子重复使用相同输入，不乘以种子数。
+{
+  "raw_delay_gt_1step": 12.777312327696984,
+  "raw_delay_gt_2steps": 0.0,
+  "encoded_delay_uses_oldest_point": 12.765212198062848,
+  "retrieved_endpoint_has_filled_input": 36.46632342868141,
+  "retrieval_before_start": 0.0,
+  "delay_speed_floor_edges": 44.12938505867501,
+  "timestamp_retrieval_gt20min_edges": 0.03566353997429961
+}
+空值前向填充比例（字段单元）：{"Wspd": {"total_cells": 6715544, "filled_cells": 25995, "filled_percent": 0.3870870327109762, "leading_zero_filled_cells": 0}, "Wdir": {"total_cells": 6715544, "filled_cells": 25930, "filled_percent": 0.3861191289938685, "leading_zero_filled_cells": 0}, "Ndir": {"total_cells": 6715544, "filled_cells": 25930, "filled_percent": 0.3861191289938685, "leading_zero_filled_cells": 0}, "Patv": {"total_cells": 6715544, "filled_cells": 1882315, "filled_percent": 28.029225927192197, "leading_zero_filled_cells": 0}}
+当前固定L=3、延迟cap=2、步长10 min；没有按事件动态启用更长历史窗口。
+纯因延迟缺失而填零的机制不存在；延迟过长时采用截断而非NaN填充。TCN卷积左补零与这两者不同。
+原时钟存在非10min间隔；按数组索引可检索不代表按实际物理时钟同样可检索。详见timestamp_retrieval_gt20min_edges。
+全部统计来自当前对比实验缓存和同版原始数据重放，不套用修正连续时钟研究中的22.08%数字。

@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "full",
+  "exit_code": 0,
+  "elapsed_seconds": 955.8652086257935,
+  "finished_at": "2026-11-19T17:03:46.396593+08:00",
+  "summary_sha256": "3968d3ea2e4f84b85bcca2bbe9b6a7624eaa22e8a91e82ec907ff5e7a1b21fbd"
+}

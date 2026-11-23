@@ -1,0 +1,67 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\dbfp_net
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: dbfp_net
+################################################################################
+[Cache] verified original preprocessing; {'train': 35075, 'val': 7516, 'test': 7517}
+[dbfp_net] model=DBFP-Net, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+[dbfp_net] epoch 001 | loss=0.023741 | node_loss=0.022018 | farm_loss=0.013249 | val_node_avg_RMSE=166.616 kW | val_farm_avg_RMSE=16810.945 kW
+[dbfp_net] epoch 002 | loss=0.019117 | node_loss=0.017831 | farm_loss=0.009893 | val_node_avg_RMSE=166.487 kW | val_farm_avg_RMSE=16996.910 kW
+[dbfp_net] epoch 003 | loss=0.018789 | node_loss=0.017514 | farm_loss=0.009809 | val_node_avg_RMSE=166.039 kW | val_farm_avg_RMSE=16630.501 kW
+[dbfp_net] epoch 004 | loss=0.018600 | node_loss=0.017335 | farm_loss=0.009730 | val_node_avg_RMSE=165.262 kW | val_farm_avg_RMSE=16823.308 kW
+[dbfp_net] epoch 005 | loss=0.018514 | node_loss=0.017251 | farm_loss=0.009719 | val_node_avg_RMSE=165.017 kW | val_farm_avg_RMSE=16740.357 kW
+[dbfp_net] epoch 006 | loss=0.018396 | node_loss=0.017141 | farm_loss=0.009660 | val_node_avg_RMSE=164.590 kW | val_farm_avg_RMSE=16635.704 kW
+[dbfp_net] epoch 007 | loss=0.018314 | node_loss=0.017066 | farm_loss=0.009603 | val_node_avg_RMSE=165.363 kW | val_farm_avg_RMSE=16849.183 kW
+[dbfp_net] epoch 008 | loss=0.018270 | node_loss=0.017023 | farm_loss=0.009595 | val_node_avg_RMSE=164.769 kW | val_farm_avg_RMSE=16707.951 kW
+[dbfp_net] epoch 009 | loss=0.018242 | node_loss=0.016995 | farm_loss=0.009597 | val_node_avg_RMSE=164.094 kW | val_farm_avg_RMSE=16595.863 kW
+[dbfp_net] epoch 010 | loss=0.018160 | node_loss=0.016922 | farm_loss=0.009528 | val_node_avg_RMSE=166.261 kW | val_farm_avg_RMSE=17087.074 kW
+[dbfp_net] epoch 011 | loss=0.018121 | node_loss=0.016884 | farm_loss=0.009518 | val_node_avg_RMSE=164.570 kW | val_farm_avg_RMSE=16561.048 kW
+[dbfp_net] epoch 012 | loss=0.018138 | node_loss=0.016899 | farm_loss=0.009533 | val_node_avg_RMSE=164.272 kW | val_farm_avg_RMSE=16605.473 kW
+[dbfp_net] epoch 013 | loss=0.018083 | node_loss=0.016850 | farm_loss=0.009483 | val_node_avg_RMSE=163.965 kW | val_farm_avg_RMSE=16542.142 kW
+[dbfp_net] epoch 014 | loss=0.018113 | node_loss=0.016874 | farm_loss=0.009528 | val_node_avg_RMSE=164.463 kW | val_farm_avg_RMSE=16619.892 kW
+[dbfp_net] epoch 015 | loss=0.018097 | node_loss=0.016861 | farm_loss=0.009513 | val_node_avg_RMSE=163.703 kW | val_farm_avg_RMSE=16534.007 kW
+[dbfp_net] epoch 016 | loss=0.017990 | node_loss=0.016763 | farm_loss=0.009441 | val_node_avg_RMSE=164.151 kW | val_farm_avg_RMSE=16471.981 kW
+[dbfp_net] epoch 017 | loss=0.017977 | node_loss=0.016753 | farm_loss=0.009421 | val_node_avg_RMSE=164.150 kW | val_farm_avg_RMSE=16435.618 kW
+[dbfp_net] epoch 018 | loss=0.017958 | node_loss=0.016733 | farm_loss=0.009420 | val_node_avg_RMSE=164.479 kW | val_farm_avg_RMSE=16521.140 kW
+[dbfp_net] epoch 019 | loss=0.017922 | node_loss=0.016701 | farm_loss=0.009386 | val_node_avg_RMSE=163.661 kW | val_farm_avg_RMSE=16420.264 kW
+[dbfp_net] epoch 020 | loss=0.017915 | node_loss=0.016694 | farm_loss=0.009389 | val_node_avg_RMSE=164.085 kW | val_farm_avg_RMSE=16536.864 kW
+[dbfp_net] epoch 021 | loss=0.017904 | node_loss=0.016685 | farm_loss=0.009378 | val_node_avg_RMSE=163.909 kW | val_farm_avg_RMSE=16585.004 kW
+[dbfp_net] epoch 022 | loss=0.017883 | node_loss=0.016665 | farm_loss=0.009374 | val_node_avg_RMSE=164.634 kW | val_farm_avg_RMSE=16520.385 kW
+[dbfp_net] epoch 023 | loss=0.017892 | node_loss=0.016673 | farm_loss=0.009381 | val_node_avg_RMSE=164.132 kW | val_farm_avg_RMSE=16528.664 kW
+[dbfp_net] epoch 024 | loss=0.017840 | node_loss=0.016627 | farm_loss=0.009326 | val_node_avg_RMSE=163.974 kW | val_farm_avg_RMSE=16603.370 kW
+[dbfp_net] epoch 025 | loss=0.017834 | node_loss=0.016620 | farm_loss=0.009340 | val_node_avg_RMSE=164.834 kW | val_farm_avg_RMSE=16670.840 kW
+[dbfp_net] epoch 026 | loss=0.017857 | node_loss=0.016641 | farm_loss=0.009354 | val_node_avg_RMSE=164.245 kW | val_farm_avg_RMSE=16606.574 kW
+[dbfp_net] epoch 027 | loss=0.017853 | node_loss=0.016637 | farm_loss=0.009351 | val_node_avg_RMSE=163.993 kW | val_farm_avg_RMSE=16664.445 kW
+[dbfp_net] early stop at epoch 27
+[dbfp_net] Test h1 node RMSE=67.781, MAE=36.828, nRMSE=4.519%, nMAE=2.455%, WAPE=16.395%, R2=0.9612
+[dbfp_net] Test h1 farm RMSE=4665.498, MAE=2697.665, nRMSE=2.321%, nMAE=1.342%, WAPE=8.962%, R2=0.9887
+[dbfp_net] Test h2 node RMSE=93.123, MAE=50.641, nRMSE=6.208%, nMAE=3.376%, WAPE=22.546%, R2=0.9269
+[dbfp_net] Test h2 farm RMSE=7591.985, MAE=4270.731, nRMSE=3.777%, nMAE=2.125%, WAPE=14.190%, R2=0.9700
+[dbfp_net] Test h3 node RMSE=109.339, MAE=61.679, nRMSE=7.289%, nMAE=4.112%, WAPE=27.463%, R2=0.8992
+[dbfp_net] Test h3 farm RMSE=9714.994, MAE=5704.593, nRMSE=4.833%, nMAE=2.838%, WAPE=18.956%, R2=0.9508
+[dbfp_net] Test h4 node RMSE=123.016, MAE=72.845, nRMSE=8.201%, nMAE=4.856%, WAPE=32.438%, R2=0.8724
+[dbfp_net] Test h4 farm RMSE=11607.393, MAE=7284.714, nRMSE=5.775%, nMAE=3.624%, WAPE=24.208%, R2=0.9298
+[dbfp_net] Test h5 node RMSE=134.802, MAE=83.340, nRMSE=8.987%, nMAE=5.556%, WAPE=37.114%, R2=0.8467
+[dbfp_net] Test h5 farm RMSE=13331.815, MAE=8735.089, nRMSE=6.633%, nMAE=4.346%, WAPE=29.030%, R2=0.9074
+[dbfp_net] Test h6 node RMSE=145.558, MAE=92.918, nRMSE=9.704%, nMAE=6.195%, WAPE=41.382%, R2=0.8213
+[dbfp_net] Test h6 farm RMSE=14895.720, MAE=10050.688, nRMSE=7.411%, nMAE=5.000%, WAPE=33.404%, R2=0.8844
+[dbfp_net] Test AVG node RMSE=115.262, MAE=66.375, nRMSE=7.684%, nMAE=4.425%, WAPE=29.555%, R2=0.8879
+[dbfp_net] Test AVG farm RMSE=10863.835, MAE=6457.246, nRMSE=5.405%, nMAE=3.213%, WAPE=21.457%, R2=0.9385
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+    case    model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE     farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+dbfp_net DBFP-Net     t+1  67.780999 36.827694       4.518733      2.455180     16.394751 0.961247  4665.498001  2697.664984       2.321143      1.342122      8.962177 0.988654
+dbfp_net DBFP-Net     t+2  93.122559 50.640528       6.208171      3.376035     22.546182 0.926856  7591.984863  4270.730526       3.777107      2.124742     14.189665 0.969959
+dbfp_net DBFP-Net     t+3 109.339059 61.679012       7.289271      4.111934     27.463330 0.899168  9714.994178  5704.592656       4.833330      2.838106     18.955517 0.950811
+dbfp_net DBFP-Net     t+4 123.015521 72.844765       8.201035      4.856318     32.437831 0.872371 11607.393159  7284.714351       5.774822      3.624236     24.208127 0.929784
+dbfp_net DBFP-Net     t+5 134.801592 83.340263       8.986773      5.556018     37.114098 0.846749 13331.815257  8735.089038       6.632744      4.345815     29.029970 0.907376
+dbfp_net DBFP-Net     t+6 145.558080 92.918471       9.703872      6.194565     41.382161 0.821322 14895.719659 10050.687950       7.410806      5.000342     33.404279 0.884375
+dbfp_net DBFP-Net     avg 115.262416 66.375122       7.684161      4.425008     29.555178 0.887949 10863.835388  6457.246424       5.404893      3.212560     21.457090 0.938490
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\dbfp_net\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\dbfp_net\summary_results_by_horizon.csv
+================================================================================

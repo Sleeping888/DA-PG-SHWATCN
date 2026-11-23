@@ -1,0 +1,114 @@
+{
+  "scope": "Actual cached comparison samples, same frozen source as seeds 84/101/1234; real nonzero physical edges only",
+  "source_sha256": "dfe51c281204fd9a2a0aba748bff0608435b3e4df311d9067cccf36eafe0f157",
+  "samples": 50108,
+  "timestamps": 50116,
+  "fields": {
+    "Wspd": {
+      "total_cells": 6715544,
+      "filled_cells": 25995,
+      "filled_percent": 0.3870870327109762,
+      "leading_zero_filled_cells": 0
+    },
+    "Wdir": {
+      "total_cells": 6715544,
+      "filled_cells": 25930,
+      "filled_percent": 0.3861191289938685,
+      "leading_zero_filled_cells": 0
+    },
+    "Ndir": {
+      "total_cells": 6715544,
+      "filled_cells": 25930,
+      "filled_percent": 0.3861191289938685,
+      "leading_zero_filled_cells": 0
+    },
+    "Patv": {
+      "total_cells": 6715544,
+      "filled_cells": 1882315,
+      "filled_percent": 28.029225927192197,
+      "leading_zero_filled_cells": 0
+    }
+  },
+  "splits": {
+    "train": {
+      "real_edges": 977385,
+      "raw_delay_gt_1step": 113330,
+      "raw_delay_gt_2steps": 0,
+      "encoded_delay_uses_oldest_point": 113221,
+      "retrieved_endpoint_has_filled_input": 338803,
+      "retrieval_before_start": 0,
+      "delay_speed_floor_edges": 391931,
+      "timestamp_retrieval_gt20min_edges": 303,
+      "origins_with_any_oldest_retrieval": 10431,
+      "origins_with_any_filled_retrieval": 19098,
+      "origins": 35075
+    },
+    "val": {
+      "real_edges": 208253,
+      "raw_delay_gt_1step": 23741,
+      "raw_delay_gt_2steps": 0,
+      "encoded_delay_uses_oldest_point": 23714,
+      "retrieved_endpoint_has_filled_input": 69804,
+      "retrieval_before_start": 0,
+      "delay_speed_floor_edges": 89756,
+      "timestamp_retrieval_gt20min_edges": 57,
+      "origins_with_any_oldest_retrieval": 2257,
+      "origins_with_any_filled_retrieval": 3560,
+      "origins": 7516
+    },
+    "test": {
+      "real_edges": 227570,
+      "raw_delay_gt_1step": 43499,
+      "raw_delay_gt_2steps": 0,
+      "encoded_delay_uses_oldest_point": 43464,
+      "retrieved_endpoint_has_filled_input": 106738,
+      "retrieval_before_start": 0,
+      "delay_speed_floor_edges": 141953,
+      "timestamp_retrieval_gt20min_edges": 144,
+      "origins_with_any_oldest_retrieval": 3562,
+      "origins_with_any_filled_retrieval": 4592,
+      "origins": 7517
+    }
+  },
+  "total": {
+    "real_edges": 1413208,
+    "raw_delay_gt_1step": 180570,
+    "raw_delay_gt_2steps": 0,
+    "encoded_delay_uses_oldest_point": 180399,
+    "retrieved_endpoint_has_filled_input": 515345,
+    "retrieval_before_start": 0,
+    "delay_speed_floor_edges": 623640,
+    "timestamp_retrieval_gt20min_edges": 504,
+    "origins_with_any_oldest_retrieval": 16250,
+    "origins_with_any_filled_retrieval": 27250,
+    "origins": 50108
+  },
+  "percentages": {
+    "raw_delay_gt_1step": 12.777312327696984,
+    "raw_delay_gt_2steps": 0.0,
+    "encoded_delay_uses_oldest_point": 12.765212198062848,
+    "retrieved_endpoint_has_filled_input": 36.46632342868141,
+    "retrieval_before_start": 0.0,
+    "delay_speed_floor_edges": 44.12938505867501,
+    "timestamp_retrieval_gt20min_edges": 0.03566353997429961
+  },
+  "delay_seconds": {
+    "mean": 375.05478879440005,
+    "p50": 340.8087909221649,
+    "p95": 665.7246816158295,
+    "p99": 778.7498281002041,
+    "max": 827.1701574325562
+  },
+  "longer_window_configured_percent": 0,
+  "delay_null_imputation_mechanism": false,
+  "nominal_tcn_receptive_field": 5,
+  "history_points": 3,
+  "timestamp_gaps": 59,
+  "limitations": [
+    "3 m/s floor is an empirical proxy, not a measured transport-speed bound",
+    "Original comparison clock omits fully missing timestamps",
+    "Filled-input exposure refers to directly interpolated source timestamps; TCN context can include additional filled cells",
+    "Fractional delay interpolation is not missing-value imputation",
+    "No dynamic long-window switch is implemented; 0% clipping does not mean no TCN convolution padding"
+  ]
+}

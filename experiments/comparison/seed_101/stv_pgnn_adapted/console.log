@@ -1,0 +1,85 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_101_20261120_223936\seed_101\stv_pgnn_adapted
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: stv_pgnn_adapted
+################################################################################
+[Data] 读取 SDWPF 数据: C:\Users\Administrator\Desktop\project_root\SDWPF\sdwpf_2021_full.csv
+[Data] 读取完成: 记录数=7042906, 风机数=134, 时间步=52559
+[Data] 使用风机数: 134 | ['TurbID 1', 'TurbID 2', 'TurbID 3', 'TurbID 4', 'TurbID 5'] ...
+[Feature] 构建 TCN-Wake-GAT 多步数据: mode=stv_pgnn_adapted, 样本数=50108, 历史窗口=3, 输出步数=1..6, 风机数=134, top_k=8
+[Feature] 2000/50108
+[Feature] 4000/50108
+[Feature] 6000/50108
+[Feature] 8000/50108
+[Feature] 10000/50108
+[Feature] 12000/50108
+[Feature] 14000/50108
+[Feature] 16000/50108
+[Feature] 18000/50108
+[Feature] 20000/50108
+[Feature] 22000/50108
+[Feature] 24000/50108
+[Feature] 26000/50108
+[Feature] 28000/50108
+[Feature] 30000/50108
+[Feature] 32000/50108
+[Feature] 34000/50108
+[Feature] 36000/50108
+[Feature] 38000/50108
+[Feature] 40000/50108
+[Feature] 42000/50108
+[Feature] 44000/50108
+[Feature] 46000/50108
+[Feature] 48000/50108
+[Feature] 50000/50108
+[Feature] 50108/50108
+[Split] train/val/test 样本数 = 35075/7516/7517, temporal_window=3, pred_horizon=1..6, node_feature_dim=6
+[stv_pgnn_adapted] model=STV-PGNN-adapted, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+[stv_pgnn_adapted] epoch 001 | loss=0.021545 | node_loss=0.019823 | farm_loss=0.013241 | val_node_avg_RMSE=159.844 kW | val_farm_avg_RMSE=16384.220 kW
+[stv_pgnn_adapted] epoch 002 | loss=0.016614 | node_loss=0.015415 | farm_loss=0.009226 | val_node_avg_RMSE=161.194 kW | val_farm_avg_RMSE=16625.382 kW
+[stv_pgnn_adapted] epoch 003 | loss=0.016296 | node_loss=0.015126 | farm_loss=0.009001 | val_node_avg_RMSE=158.606 kW | val_farm_avg_RMSE=16145.772 kW
+[stv_pgnn_adapted] epoch 004 | loss=0.016190 | node_loss=0.015029 | farm_loss=0.008926 | val_node_avg_RMSE=162.128 kW | val_farm_avg_RMSE=16808.626 kW
+[stv_pgnn_adapted] epoch 005 | loss=0.016090 | node_loss=0.014939 | farm_loss=0.008856 | val_node_avg_RMSE=159.586 kW | val_farm_avg_RMSE=16378.315 kW
+[stv_pgnn_adapted] epoch 006 | loss=0.015959 | node_loss=0.014819 | farm_loss=0.008767 | val_node_avg_RMSE=157.516 kW | val_farm_avg_RMSE=16073.986 kW
+[stv_pgnn_adapted] epoch 007 | loss=0.015887 | node_loss=0.014754 | farm_loss=0.008719 | val_node_avg_RMSE=155.520 kW | val_farm_avg_RMSE=15792.269 kW
+[stv_pgnn_adapted] epoch 008 | loss=0.015741 | node_loss=0.014623 | farm_loss=0.008602 | val_node_avg_RMSE=172.682 kW | val_farm_avg_RMSE=18452.375 kW
+[stv_pgnn_adapted] epoch 009 | loss=0.015688 | node_loss=0.014574 | farm_loss=0.008571 | val_node_avg_RMSE=157.336 kW | val_farm_avg_RMSE=16061.407 kW
+[stv_pgnn_adapted] epoch 010 | loss=0.015533 | node_loss=0.014435 | farm_loss=0.008445 | val_node_avg_RMSE=157.433 kW | val_farm_avg_RMSE=16071.547 kW
+[stv_pgnn_adapted] epoch 011 | loss=0.015499 | node_loss=0.014402 | farm_loss=0.008433 | val_node_avg_RMSE=160.296 kW | val_farm_avg_RMSE=16629.051 kW
+[stv_pgnn_adapted] epoch 012 | loss=0.015470 | node_loss=0.014377 | farm_loss=0.008405 | val_node_avg_RMSE=155.815 kW | val_farm_avg_RMSE=15839.236 kW
+[stv_pgnn_adapted] epoch 013 | loss=0.015370 | node_loss=0.014286 | farm_loss=0.008340 | val_node_avg_RMSE=158.402 kW | val_farm_avg_RMSE=16262.141 kW
+[stv_pgnn_adapted] epoch 014 | loss=0.015327 | node_loss=0.014247 | farm_loss=0.008302 | val_node_avg_RMSE=155.964 kW | val_farm_avg_RMSE=15932.939 kW
+[stv_pgnn_adapted] epoch 015 | loss=0.015168 | node_loss=0.014102 | farm_loss=0.008202 | val_node_avg_RMSE=156.921 kW | val_farm_avg_RMSE=16023.692 kW
+[stv_pgnn_adapted] early stop at epoch 15
+[stv_pgnn_adapted] Test h1 node RMSE=66.914, MAE=36.729, nRMSE=4.461%, nMAE=2.449%, WAPE=16.351%, R2=0.9622
+[stv_pgnn_adapted] Test h1 farm RMSE=4582.144, MAE=2778.915, nRMSE=2.280%, nMAE=1.383%, WAPE=9.232%, R2=0.9891
+[stv_pgnn_adapted] Test h2 node RMSE=87.947, MAE=48.182, nRMSE=5.863%, nMAE=3.212%, WAPE=21.452%, R2=0.9348
+[stv_pgnn_adapted] Test h2 farm RMSE=7074.636, MAE=3921.827, nRMSE=3.520%, nMAE=1.951%, WAPE=13.030%, R2=0.9739
+[stv_pgnn_adapted] Test h3 node RMSE=103.283, MAE=58.133, nRMSE=6.886%, nMAE=3.876%, WAPE=25.884%, R2=0.9100
+[stv_pgnn_adapted] Test h3 farm RMSE=9193.722, MAE=5201.033, nRMSE=4.574%, nMAE=2.588%, WAPE=17.282%, R2=0.9559
+[stv_pgnn_adapted] Test h4 node RMSE=116.234, MAE=67.648, nRMSE=7.749%, nMAE=4.510%, WAPE=30.124%, R2=0.8861
+[stv_pgnn_adapted] Test h4 farm RMSE=11036.217, MAE=6526.474, nRMSE=5.491%, nMAE=3.247%, WAPE=21.688%, R2=0.9365
+[stv_pgnn_adapted] Test h5 node RMSE=127.252, MAE=76.294, nRMSE=8.483%, nMAE=5.086%, WAPE=33.976%, R2=0.8634
+[stv_pgnn_adapted] Test h5 farm RMSE=12633.500, MAE=7753.818, nRMSE=6.285%, nMAE=3.858%, WAPE=25.769%, R2=0.9168
+[stv_pgnn_adapted] Test h6 node RMSE=137.232, MAE=84.108, nRMSE=9.149%, nMAE=5.607%, WAPE=37.458%, R2=0.8412
+[stv_pgnn_adapted] Test h6 farm RMSE=14063.858, MAE=8838.349, nRMSE=6.997%, nMAE=4.397%, WAPE=29.375%, R2=0.8969
+[stv_pgnn_adapted] Test AVG node RMSE=109.099, MAE=61.849, nRMSE=7.273%, nMAE=4.123%, WAPE=27.540%, R2=0.8996
+[stv_pgnn_adapted] Test AVG farm RMSE=10285.642, MAE=5836.736, nRMSE=5.117%, nMAE=2.904%, WAPE=19.395%, R2=0.9449
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+            case            model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE    farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+stv_pgnn_adapted STV-PGNN-adapted     t+1  66.914386 36.728552       4.460959      2.448570     16.350616 0.962232  4582.144013 2778.914555       2.279674      1.382545      9.232104 0.989056
+stv_pgnn_adapted STV-PGNN-adapted     t+2  87.946671 48.181849       5.863111      3.212123     21.451528 0.934761  7074.635796 3921.827095       3.519719      1.951158     13.030420 0.973913
+stv_pgnn_adapted STV-PGNN-adapted     t+3 103.282899 58.132631       6.885527      3.875509     25.884261 0.910028  9193.721794 5201.033448       4.573991      2.587579     17.282264 0.955948
+stv_pgnn_adapted STV-PGNN-adapted     t+4 116.233865 67.648205       7.748924      4.509880     30.123799 0.886055 11036.216607 6526.473995       5.490655      3.247002     21.688388 0.936525
+stv_pgnn_adapted STV-PGNN-adapted     t+5 127.251881 76.294383       8.483459      5.086292     33.976342 0.863434 12633.500498 7753.818083       6.285324      3.857621     25.768839 0.916825
+stv_pgnn_adapted STV-PGNN-adapted     t+6 137.232086 84.108345       9.148806      5.607223     37.458485 0.841178 14063.857779 8838.348850       6.996944      4.397188     29.374972 0.896929
+stv_pgnn_adapted STV-PGNN-adapted     avg 109.098967 61.848994       7.273264      4.123266     27.539807 0.899612 10285.641591 5836.735986       5.117235      2.903849     19.395166 0.944863
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_101_20261120_223936\seed_101\stv_pgnn_adapted\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_101_20261120_223936\seed_101\stv_pgnn_adapted\summary_results_by_horizon.csv
+================================================================================

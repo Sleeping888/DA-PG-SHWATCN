@@ -1,0 +1,6 @@
+# Byte-exact storage for a reproducibility package.
+# MANIFEST_SHA256.json records the SHA-256 of every shipped file, so no
+# end-of-line, encoding or filter conversion may be applied in either
+# direction. Declaring every path as non-text guarantees that a fresh clone
+# reproduces the manifest exactly.
+* -text

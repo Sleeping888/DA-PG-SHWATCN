@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "parameters_all_cases": [
+    168918,
+    168918,
+    168918,
+    168918,
+    168918,
+    168918
+  ],
+  "fixed_delay_encoding_consistent": true,
+  "L3_cached_normalization_exact": true,
+  "all_test_targets_aligned": true
+}

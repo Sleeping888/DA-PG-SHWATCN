@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "dbfp_net",
+  "validation_call": 36,
+  "val_node_avg_rmse": 163.27576718359893,
+  "best_epoch": 27,
+  "updated_at": "2026-11-20T23:14:37.617827+08:00"
+}

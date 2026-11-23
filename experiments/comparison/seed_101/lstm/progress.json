@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "lstm",
+  "validation_call": 25,
+  "val_node_avg_rmse": 164.13245972181574,
+  "best_epoch": 16,
+  "updated_at": "2026-11-20T22:48:59.978842+08:00"
+}

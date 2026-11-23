@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "cnn_bilstm",
+  "validation_call": 33,
+  "val_node_avg_rmse": 163.63793659887378,
+  "best_epoch": 24,
+  "updated_at": "2026-11-19T18:24:59.031708+08:00"
+}

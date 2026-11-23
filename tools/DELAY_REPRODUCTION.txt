@@ -1,0 +1,7 @@
+Portable delay/window reproduction:
+1. python tools/rebuild_preprocessing.py --output rebuilt_cache
+2. python tools/run_delay_case.py --cache rebuilt_cache --output reproduction_physical_L3_seed84 --seed 84 --case physical_L3
+
+To inspect path relocation without training, add --prepare-only.
+The tool copies the frozen files and relocates paths into a NEW working folder. Archived original plans are never edited.
+Other cases: physical_L13, fixed10_L3, fixed10_L13, fixed20_L3, fixed20_L13. Seeds: 84,101,1234.

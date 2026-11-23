@@ -1,0 +1,164 @@
+[
+  {
+    "model": "full",
+    "seed": 84,
+    "checkpoint_sha256": "18c334661390d97387a8abbaad8ff6d4e0c0c458c443ab8f4884c674b7190d2c",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "full",
+    "seed": 101,
+    "checkpoint_sha256": "8a633674159271c16ad660920718d0852e51e837073a1fb7d3966f706bc64b70",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "full",
+    "seed": 1234,
+    "checkpoint_sha256": "6251d024ec83f87728ddc4b5f0d96d50bb0c9c8191e4183fa4556d7a863784d5",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "lstm",
+    "seed": 84,
+    "checkpoint_sha256": "b858d5489e1ad4ba7e3106641701853c3190233162ea7c6ed963c3e3e92cc7b4",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "lstm",
+    "seed": 101,
+    "checkpoint_sha256": "3e993260f221664d1194d23cdba7b9ccb7d3832f160d8cde55d68082868c6aca",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "lstm",
+    "seed": 1234,
+    "checkpoint_sha256": "2617b7b8a5251a28105f72d46c2a5c5cf127d42cb85ed05bf7ea168b06951af6",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "cnn_lstm",
+    "seed": 84,
+    "checkpoint_sha256": "23d28e619b5e3646583d032213cfcda873cd71bec3dd9d585e3d3993801ca8b6",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "cnn_lstm",
+    "seed": 101,
+    "checkpoint_sha256": "caab62633df5969e3acc9bc2838b2e28ea6634df4e11f6e5bb98c4b459f4e934",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "cnn_lstm",
+    "seed": 1234,
+    "checkpoint_sha256": "706ec6677f8cfd41a5f47a64fb62882b5a433d93f4135af14b8ec2e393699593",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "cnn_bilstm",
+    "seed": 84,
+    "checkpoint_sha256": "ebee7d37c73234b13cbff4fd56cd6bc7744158819a5f9ff4ac55d34f6d386569",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "cnn_bilstm",
+    "seed": 101,
+    "checkpoint_sha256": "b905fc9eb507b5145788858dacaf9bd5f1a17fe4124d629a59e9ba5f39ac731a",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "cnn_bilstm",
+    "seed": 1234,
+    "checkpoint_sha256": "219f16b134f971c6e2b325272025e8e5e82074f3fd7fab522e4391e72bc066ea",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "transformer",
+    "seed": 84,
+    "checkpoint_sha256": "ecf6c095bbf60f3a2d2f78e1b630f583de7227fec31e8c628bbbc5d0513bfd43",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "transformer",
+    "seed": 101,
+    "checkpoint_sha256": "ba00ea71035408c6e8d6937fd54cec6f60530d84698d65ce88b6a8b5b4514666",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "transformer",
+    "seed": 1234,
+    "checkpoint_sha256": "da5bab4229a43301a815c8e355a56af8f107b60d950ca9307b8e782a2704c3c9",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "dbfp_net",
+    "seed": 84,
+    "checkpoint_sha256": "cbf525b4c8c6d4ba32673f24a2936670cb8d09ba3312ffbadcb98f9c7a3eaaa5",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "dbfp_net",
+    "seed": 101,
+    "checkpoint_sha256": "54d552770f9663fcc0eacbbaf19c8639557755bc1f140423540bf4aa8bfa16f4",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "dbfp_net",
+    "seed": 1234,
+    "checkpoint_sha256": "9a6ecc62852a6ae3badd98426cdb7df100af8cfd02ca7ba2f17330d8f9aa2bbc",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "stgcn",
+    "seed": 84,
+    "checkpoint_sha256": "52dffea86e5c953926faf06ffde3aea7a34d76d5edbc7c30ae8c94dd0e879e3f",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "stgcn",
+    "seed": 101,
+    "checkpoint_sha256": "55589415a3e0125e8e51e77c025ad610b9811000e1d8d8f503ea11b1444e3f85",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "stgcn",
+    "seed": 1234,
+    "checkpoint_sha256": "051cc4040c469860778b52ad3af75575c2bc67025728b9e2d7482dbf72f14d5f",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "agcrn",
+    "seed": 84,
+    "checkpoint_sha256": "1c5bff9b12facb0f6c43be2423e4dc1f71f7972b3ea12fdfd3e6d0ac8066e9a3",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "agcrn",
+    "seed": 101,
+    "checkpoint_sha256": "0024ba56368b6585ec3dc371672a92c33bc211c876c2c8cb488c96b105e5bd7e",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "agcrn",
+    "seed": 1234,
+    "checkpoint_sha256": "70cb46f9120118d1084c2f927948db8e6842d28d166e7e292d7994126adc2cf5",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "stv_pgnn_adapted",
+    "seed": 84,
+    "checkpoint_sha256": "b0d5376c19343eb7119b3c90e956e5c010862b6371a6d5dfdcea3a39ee1e5485",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "stv_pgnn_adapted",
+    "seed": 101,
+    "checkpoint_sha256": "56a89a92ed1b5fa2e014bc0ff546fe22229d2c844b308205752c49282bec8d61",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  },
+  {
+    "model": "stv_pgnn_adapted",
+    "seed": 1234,
+    "checkpoint_sha256": "51d6a156289fa140d6814fa6cc66f8bfccba6f44ee3aaeeb70aad20110a0c608",
+    "first_origin_max_diff_kw": 5.684341886080802e-14
+  }
+]

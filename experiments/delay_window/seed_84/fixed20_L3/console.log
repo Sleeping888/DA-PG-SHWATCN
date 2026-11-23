@@ -1,0 +1,27 @@
+fixed20_L3/84 epoch 001 val_RMSE=152.6169 elapsed=29.2s
+fixed20_L3/84 epoch 002 val_RMSE=148.9959 elapsed=61.1s
+fixed20_L3/84 epoch 003 val_RMSE=147.4038 elapsed=93.6s
+fixed20_L3/84 epoch 004 val_RMSE=147.4071 elapsed=125.6s
+fixed20_L3/84 epoch 005 val_RMSE=145.5262 elapsed=157.4s
+fixed20_L3/84 epoch 006 val_RMSE=149.6015 elapsed=189.5s
+fixed20_L3/84 epoch 007 val_RMSE=147.3306 elapsed=221.1s
+fixed20_L3/84 epoch 008 val_RMSE=145.9902 elapsed=253.3s
+fixed20_L3/84 epoch 009 val_RMSE=145.2996 elapsed=284.8s
+fixed20_L3/84 epoch 010 val_RMSE=145.3813 elapsed=317.2s
+fixed20_L3/84 epoch 011 val_RMSE=145.1622 elapsed=349.8s
+fixed20_L3/84 epoch 012 val_RMSE=144.7209 elapsed=381.5s
+fixed20_L3/84 epoch 013 val_RMSE=144.2089 elapsed=413.5s
+fixed20_L3/84 epoch 014 val_RMSE=143.8409 elapsed=445.4s
+fixed20_L3/84 epoch 015 val_RMSE=143.4292 elapsed=477.4s
+fixed20_L3/84 epoch 016 val_RMSE=144.0295 elapsed=509.0s
+fixed20_L3/84 epoch 017 val_RMSE=147.6972 elapsed=541.0s
+fixed20_L3/84 epoch 018 val_RMSE=142.7958 elapsed=573.5s
+fixed20_L3/84 epoch 019 val_RMSE=144.2870 elapsed=605.1s
+fixed20_L3/84 epoch 020 val_RMSE=144.0606 elapsed=636.7s
+fixed20_L3/84 epoch 021 val_RMSE=143.0255 elapsed=668.7s
+fixed20_L3/84 epoch 022 val_RMSE=143.3137 elapsed=700.7s
+fixed20_L3/84 epoch 023 val_RMSE=144.7630 elapsed=732.2s
+fixed20_L3/84 epoch 024 val_RMSE=142.9086 elapsed=763.6s
+fixed20_L3/84 epoch 025 val_RMSE=145.1410 elapsed=795.5s
+fixed20_L3/84 epoch 026 val_RMSE=143.2882 elapsed=826.4s
+COMPLETE fixed20_L3/84: observed RMSE=127.3233

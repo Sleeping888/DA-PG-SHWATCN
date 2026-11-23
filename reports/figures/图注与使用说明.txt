@@ -1,0 +1,13 @@
+主图：Fig_comparison_observed，原始有效标签评分，84/101/1234。
+附图：Fig_comparison_original_protocol，原对比实验评分，含原目标填补处理；不能与主图混用。
+风格：参考用户SVG的2×3布局、Arial字体、顶部共享图例、模型配色和红色Full曲线；补入STV-PGNN-adapted与三种子误差棒。
+成图尺寸：182.88×133.35 mm；正文刻度7.5 pt、坐标标签8.5 pt。保留九模型，未平滑、拟合或删除不利结果。
+SVG保留可编辑文字；PDF为嵌入字体的矢量图；PNG和LZW TIFF均600 dpi。
+三列指标沿用参考图。nRMSE/nMAE是容量归一化版本，与RMSE/MAE曲线仅相差常数，因此未在同图重复。
+误差棒按各预测步分别计算。每步曲线不能通过简单算术平均还原pooled RMSE或pooled R²；原脚本AVG为pooled。
+
+英文图注：
+Comparison of six-step wind-power forecasts across nine models. Panels (a–c) show turbine-level RMSE, MAE and R²; panels (d–f) show the corresponding wind-farm metrics. Lines and markers denote means over three training seeds (84, 101 and 1234), and error bars indicate sample standard deviations, not confidence intervals. Forecast lead times t+1 to t+6 correspond nominally to 10–60 min. The main figure uses only finite, nonnegative original power observations as test labels; farm-level scores require valid observations for all 134 turbines. Predictions are from the previously selected checkpoints without retraining. Original retained timestamps include gaps; the scoring mask changes evaluation only, while training and checkpoint selection retain the original protocol.
+
+中文图注：
+9种模型的六步功率预测结果比较。（a–c）为单机RMSE、MAE及R²；（d–f）为全场对应指标。折线表示种子84、101、1234的均值，误差棒表示样本标准差，非置信区间。t+1至t+6名义对应10–60分钟。主图仅使用原始有限且非负功率标签；全场要求134台标签全部有效。预测来自原验证准则选出的固定最佳检查点，未重新训练。原保留时间轴含缺口；本次仅改变测试评分，训练与检查点选择保持原协议。

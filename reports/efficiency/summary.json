@@ -1,0 +1,218 @@
+[
+  {
+    "model": "full",
+    "label": "Full",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      37,
+      50,
+      30
+    ],
+    "task_seconds": [
+      1295.6791460514069,
+      1265.981939792633,
+      955.8652086257935
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 1172.5087648232777,
+    "task_seconds_sd": 188.20548303998333,
+    "inference_ms_mean": 1.7448649999999999,
+    "inference_ms_sd": 0.2338740747441761
+  },
+  {
+    "model": "lstm",
+    "label": "LSTM",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      50,
+      24,
+      32
+    ],
+    "task_seconds": [
+      1605.8606202602386,
+      590.2644445896149,
+      920.6271281242371
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 1038.9173976580303,
+    "task_seconds_sd": 518.0283186361361,
+    "inference_ms_mean": 0.35980588888888887,
+    "inference_ms_sd": 0.02391456869389064
+  },
+  {
+    "model": "cnn_lstm",
+    "label": "CNN-LSTM",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      42,
+      20,
+      18
+    ],
+    "task_seconds": [
+      1255.9199345111847,
+      505.2262771129608,
+      610.2663865089417
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 790.4708660443624,
+    "task_seconds_sd": 406.49782612943255,
+    "inference_ms_mean": 0.4511503333333334,
+    "inference_ms_sd": 0.013753993504918289
+  },
+  {
+    "model": "cnn_bilstm",
+    "label": "CNN-BiLSTM",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      46,
+      29,
+      32
+    ],
+    "task_seconds": [
+      900.5481100082397,
+      500.2701406478882,
+      750.3357632160187
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 717.0513379573822,
+    "task_seconds_sd": 202.2041120066799,
+    "inference_ms_mean": 0.40426344444444445,
+    "inference_ms_sd": 0.003690111249953986
+  },
+  {
+    "model": "transformer",
+    "label": "Transformer",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      47,
+      10,
+      29
+    ],
+    "task_seconds": [
+      2186.4375059604645,
+      410.2320020198822,
+      1641.0078175067902
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 1412.5591084957123,
+    "task_seconds_sd": 909.8725776414111,
+    "inference_ms_mean": 0.49360377777777775,
+    "inference_ms_sd": 0.014987920715375067
+  },
+  {
+    "model": "dbfp_net",
+    "label": "DBFP-Net",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      28,
+      35,
+      27
+    ],
+    "task_seconds": [
+      465.4288010597229,
+      530.3680605888367,
+      610.2656691074371
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 535.3541769186655,
+    "task_seconds_sd": 72.54705785563385,
+    "inference_ms_mean": 0.46145866666666663,
+    "inference_ms_sd": 0.010788179740396924
+  },
+  {
+    "model": "stgcn",
+    "label": "STGCN",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      22,
+      14,
+      16
+    ],
+    "task_seconds": [
+      325.359739780426,
+      235.1029815673828,
+      245.31338763237
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 268.59203632672626,
+    "task_seconds_sd": 49.4266346675391,
+    "inference_ms_mean": 0.7654923333333334,
+    "inference_ms_sd": 0.024633083995129673
+  },
+  {
+    "model": "agcrn",
+    "label": "AGCRN",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      16,
+      27,
+      35
+    ],
+    "task_seconds": [
+      185.0827374458313,
+      285.19656109809875,
+      350.3850417137146
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 273.55478008588153,
+    "task_seconds_sd": 83.26380514917801,
+    "inference_ms_mean": 0.4503765555555555,
+    "inference_ms_sd": 0.004872795345741638
+  },
+  {
+    "model": "stv_pgnn_adapted",
+    "label": "STV-PGNN-adapted",
+    "seeds": [
+      84,
+      101,
+      1234
+    ],
+    "actual_epochs": [
+      31,
+      15,
+      24
+    ],
+    "task_seconds": [
+      1635.7216668128967,
+      535.2961783409119,
+      1250.789487361908
+    ],
+    "gpu": "RTX 4060 Ti 8 GB",
+    "task_seconds_mean": 1140.6024441719055,
+    "task_seconds_sd": 558.4263176865128,
+    "inference_ms_mean": 2.139871888888889,
+    "inference_ms_sd": 0.03119349874632594
+  }
+]

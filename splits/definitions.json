@@ -1,0 +1,93 @@
+{
+  "index_base": 0,
+  "index_clock": "data/retained_times.npy",
+  "comparison": {
+    "L": 3,
+    "first_origin": 2
+  },
+  "delay": {
+    "L": [
+      3,
+      13
+    ],
+    "first_origin": 12
+  },
+  "studies": {
+    "comparison": {
+      "train": {
+        "samples": 35075,
+        "first_origin": "2021-01-01T00:30:00.000000000",
+        "last_origin": "2021-09-16T14:10:00.000000000",
+        "first_origin_index": 2,
+        "last_origin_index": 35076
+      },
+      "val": {
+        "samples": 7516,
+        "first_origin": "2021-09-16T14:20:00.000000000",
+        "last_origin": "2021-11-09T16:40:00.000000000",
+        "first_origin_index": 35077,
+        "last_origin_index": 42592
+      },
+      "test": {
+        "samples": 7517,
+        "first_origin": "2021-11-09T16:50:00.000000000",
+        "last_origin": "2021-12-31T22:50:00.000000000",
+        "first_origin_index": 42593,
+        "last_origin_index": 50109
+      },
+      "train_val_shared_target_timestamps": 5,
+      "val_test_shared_target_timestamps": 5
+    },
+    "delay_L3": {
+      "train": {
+        "samples": 35065,
+        "first_origin": "2021-01-01T02:10:00.000000000",
+        "last_origin": "2021-09-16T14:10:00.000000000",
+        "first_origin_index": 12,
+        "last_origin_index": 35076
+      },
+      "val": {
+        "samples": 7516,
+        "first_origin": "2021-09-16T14:20:00.000000000",
+        "last_origin": "2021-11-09T16:40:00.000000000",
+        "first_origin_index": 35077,
+        "last_origin_index": 42592
+      },
+      "test": {
+        "samples": 7517,
+        "first_origin": "2021-11-09T16:50:00.000000000",
+        "last_origin": "2021-12-31T22:50:00.000000000",
+        "first_origin_index": 42593,
+        "last_origin_index": 50109
+      },
+      "train_val_shared_target_timestamps": 5,
+      "val_test_shared_target_timestamps": 5
+    },
+    "delay_L13": {
+      "train": {
+        "samples": 35065,
+        "first_origin": "2021-01-01T02:10:00.000000000",
+        "last_origin": "2021-09-16T14:10:00.000000000",
+        "first_origin_index": 12,
+        "last_origin_index": 35076
+      },
+      "val": {
+        "samples": 7516,
+        "first_origin": "2021-09-16T14:20:00.000000000",
+        "last_origin": "2021-11-09T16:40:00.000000000",
+        "first_origin_index": 35077,
+        "last_origin_index": 42592
+      },
+      "test": {
+        "samples": 7517,
+        "first_origin": "2021-11-09T16:50:00.000000000",
+        "last_origin": "2021-12-31T22:50:00.000000000",
+        "first_origin_index": 42593,
+        "last_origin_index": 50109
+      },
+      "train_val_shared_target_timestamps": 5,
+      "val_test_shared_target_timestamps": 5
+    }
+  },
+  "important": "Actual overlapping multi-horizon targets are preserved; no claim of purged non-overlapping split."
+}

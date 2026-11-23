@@ -1,0 +1,8 @@
+{
+  "seed": 1234,
+  "model": "lstm",
+  "exit_code": 0,
+  "elapsed_seconds": 920.6271281242371,
+  "finished_at": "2026-11-19T17:27:27.350095+08:00",
+  "summary_sha256": "d8c3e07e925f027e9dee4e59c01a968a17d373c39715f7ae40abc1b0dd3e8d87"
+}

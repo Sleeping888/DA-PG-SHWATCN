@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "stgcn",
+  "exit_code": 0,
+  "elapsed_seconds": 235.1029815673828,
+  "finished_at": "2026-11-20T23:11:29.771742+08:00",
+  "summary_sha256": "0c89bbe2c23c98b887e0feaa87f3f93219d28da570a98d15fc98cf3a9cff137f"
+}

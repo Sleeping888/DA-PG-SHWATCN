@@ -1,0 +1,812 @@
+[
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "full",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/full",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\full\\test_predictions_full.csv",
+    "original_prediction_sha256": "8dfe65a30d4e588744258ea5e917a83e4e8baa6e8b15873889aa99f722615a7f",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "64969d74f20a49ea22b5a056283ca6a013407a60c8cde0e74b03ddb8c15313f8",
+    "prediction_file": "predictions/comparison/1234/full.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "lstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/lstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\lstm\\test_predictions_lstm.csv",
+    "original_prediction_sha256": "6fd52e2f2b99c4679285cdc02a6703f798b33b20c725f9f340d2d769df688265",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "aad1f2bb7232a233d6691e4323434a1840d22d755a07b05e3362da732a41ace4",
+    "prediction_file": "predictions/comparison/1234/lstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "cnn_lstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/cnn_lstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\cnn_lstm\\test_predictions_cnn_lstm.csv",
+    "original_prediction_sha256": "56cf1cd8f2a17d8e37915637289f3501b65bc7e936793f85ba90fb4f236d7a64",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "f13d014cd30919c8ce4e2ff733cd9a704ddc57fc7b85a353fed4f7d2139e91fb",
+    "prediction_file": "predictions/comparison/1234/cnn_lstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "cnn_bilstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/cnn_bilstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\cnn_bilstm\\test_predictions_cnn_bilstm.csv",
+    "original_prediction_sha256": "db108a91a1294ddf8deb26b1682d9b618af9056c7e67e24cb5ad50be47e353f7",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "a1f228481a849be359a201afb4fa87663e94cf058097b2d0ddf2fd0d05bd2427",
+    "prediction_file": "predictions/comparison/1234/cnn_bilstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "transformer",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/transformer",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\transformer\\test_predictions_transformer.csv",
+    "original_prediction_sha256": "b1cb4030226a673bfcf65dae208ec68cbdc988120abcab7dd2780085f778a872",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "6fa00db34be259f533c9c5df057eea15b908897bb3639a935245d45a04ffe65d",
+    "prediction_file": "predictions/comparison/1234/transformer.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "dbfp_net",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/dbfp_net",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\dbfp_net\\test_predictions_dbfp_net.csv",
+    "original_prediction_sha256": "ce0914f5aac1b29d70eeab1187cc573950d377852e678bfddc7074d7b326a238",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "af6e5a88310c515421e4110617317585f4362aaa51b0089fc083da9bf55716d0",
+    "prediction_file": "predictions/comparison/1234/dbfp_net.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "stgcn",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/stgcn",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\stgcn\\test_predictions_stgcn.csv",
+    "original_prediction_sha256": "ff2608b3e5387cc6dd9e5e11de4e82a16764f8db27ff192da158f3077e28ae67",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "38d8450fdf7fcaa9e99120d79b8dcae25305d0a78e32ab3f63ba853721ad24d1",
+    "prediction_file": "predictions/comparison/1234/stgcn.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "agcrn",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/agcrn",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\agcrn\\test_predictions_agcrn.csv",
+    "original_prediction_sha256": "ee42afe64a4b41eba59edfb2bb77a2b77900c849455f6fc09ae8438842cc3251",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "b6f3f08a4003774bf8eaccb196bd6080ff170a44feb669e375b94b5c1abcd158",
+    "prediction_file": "predictions/comparison/1234/agcrn.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 1234,
+    "case": "stv_pgnn_adapted",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_1234/stv_pgnn_adapted",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_1234\\stv_pgnn_adapted\\test_predictions_stv_pgnn_adapted.csv",
+    "original_prediction_sha256": "616eaec1ff4e8ebdff4eb5accf4503a2d2adb87d1905db986d16891311e9e667",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "a4af96da44d4ddb6e43fee020ca4eb5a4c7d462fca342282c0c1e7db8ab42f7f",
+    "prediction_file": "predictions/comparison/1234/stv_pgnn_adapted.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "full",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/full",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\full\\test_predictions_full.csv",
+    "original_prediction_sha256": "9109d7bbab35110ff0c2279c8902098dc9ec770cc47c97fda8c8fc7db664b794",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "78526deb2716fda504643479423539110b36c158a8a8e3115abced38fb755265",
+    "prediction_file": "predictions/comparison/84/full.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "lstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/lstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\lstm\\test_predictions_lstm.csv",
+    "original_prediction_sha256": "c3ea9259bef0892443659b0a66608d3ce1d127164d955a1e3938311c3e10ef4d",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "6be97a9dc50e0e39e06d5cf05669bd27564dbab9fafb8b38f0ad85254e80841e",
+    "prediction_file": "predictions/comparison/84/lstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "cnn_lstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/cnn_lstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\cnn_lstm\\test_predictions_cnn_lstm.csv",
+    "original_prediction_sha256": "981c6aa992e0ae6f192883c6ec7f30477d69e8d065a4d4d3baef45e3992455aa",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "8c09e3d6450a2fe2dd71f2914d4dbb443c7af016a6f5af7d19a144d5fd45636f",
+    "prediction_file": "predictions/comparison/84/cnn_lstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "cnn_bilstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/cnn_bilstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\cnn_bilstm\\test_predictions_cnn_bilstm.csv",
+    "original_prediction_sha256": "00f10e29228378b96f4fb8dbacccac92fa0d74f7e24af00eaacd3768e43c20d3",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "0d09cb4f38809bd2921e8e49743a4e0172183462e60ae2f563e569255d2337fb",
+    "prediction_file": "predictions/comparison/84/cnn_bilstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "transformer",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/transformer",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\transformer\\test_predictions_transformer.csv",
+    "original_prediction_sha256": "3a50032bee0083e7c7716077f2bfd38cead5e729467c865e7e3bc276afb10bad",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "d10996a32868989caca2cc528f6a1dfa0fced9048764d19cb2e2aa94241d79b2",
+    "prediction_file": "predictions/comparison/84/transformer.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "dbfp_net",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/dbfp_net",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\dbfp_net\\test_predictions_dbfp_net.csv",
+    "original_prediction_sha256": "3fd66e22ba4bacbd2eed7faf2354b651abf94eb181b817c3a4e257b20921ce78",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "cc43ea4299ebb76bf598c562899bedae16d1c66f251cacb7e10b808f5c1fc86e",
+    "prediction_file": "predictions/comparison/84/dbfp_net.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "stgcn",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/stgcn",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\stgcn\\test_predictions_stgcn.csv",
+    "original_prediction_sha256": "9a02294db134efaaf5affce46ce09db8193df9d6bb12f5b1a927759e7cf30600",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "2628a3aad53cd4b2559944d9c0b875e4547397220ba18e66a537bf4c714e7764",
+    "prediction_file": "predictions/comparison/84/stgcn.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "agcrn",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/agcrn",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\agcrn\\test_predictions_agcrn.csv",
+    "original_prediction_sha256": "2d252b4e8488dd1fd3cdd652c1e7b636e34ed9577ac840be26d89f34acf4fdb5",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "263e18549cc9751c9780b05142fa7d2f896318925e67e264389cf8af57057ea4",
+    "prediction_file": "predictions/comparison/84/agcrn.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 84,
+    "case": "stv_pgnn_adapted",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_84/stv_pgnn_adapted",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_1234_21_42_84_20261119_164746\\seed_84\\stv_pgnn_adapted\\test_predictions_stv_pgnn_adapted.csv",
+    "original_prediction_sha256": "b02d67a9ad8f12d80e04a54ff6e06f212bc0c133cc89e3f05ce08d5cc4a649fd",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "c6b010a419836ab2f64f355b1a1de77bbc210ea70cf59fe2d4e046bf8b3d83a7",
+    "prediction_file": "predictions/comparison/84/stv_pgnn_adapted.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "full",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/full",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\full\\test_predictions_full.csv",
+    "original_prediction_sha256": "23fbbc4e2f3530432c4b20f5f1dc1175874cb86ddc80877e0f711668f7125c2b",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "bbbfc1ca59fd94b4800d419444295b97182118f67fe0c3186a56e335640d4a91",
+    "prediction_file": "predictions/comparison/101/full.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "lstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/lstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\lstm\\test_predictions_lstm.csv",
+    "original_prediction_sha256": "01b90f183102627bbad712e0e768824e16820bfbab0586967f5342cfd929a2ef",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "2fdb965a857c66463cd2ec33e719dcd3e5bb19850182c99727cc3786798e5e10",
+    "prediction_file": "predictions/comparison/101/lstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "cnn_lstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/cnn_lstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\cnn_lstm\\test_predictions_cnn_lstm.csv",
+    "original_prediction_sha256": "2b32bddf557cacb017e3951a63afc6bee1ceeeebb326fe205ed024af6ecd4e1d",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "5b6064d73391d6ae64fbef417dac6c09265d0e69487c242951e64bfb0b324726",
+    "prediction_file": "predictions/comparison/101/cnn_lstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "cnn_bilstm",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/cnn_bilstm",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\cnn_bilstm\\test_predictions_cnn_bilstm.csv",
+    "original_prediction_sha256": "86605bde76c79540d5a7b1fd7abfa789d9f0e5f0acf50a0b646fb11b07f9d3a2",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "84a2e6aa2e0bfc20a48ee8ef8f039700a07e55d80ad402df70e1e5b19b3e9cee",
+    "prediction_file": "predictions/comparison/101/cnn_bilstm.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "transformer",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/transformer",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\transformer\\test_predictions_transformer.csv",
+    "original_prediction_sha256": "5de49bf953b6a650ef2a21355e9c6623874d01e0fb09547564bf30845b37f3d5",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "13578678ce0e24f28d33124e371c9201e3db068331a55403e9fcdc6a7bdca05c",
+    "prediction_file": "predictions/comparison/101/transformer.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "dbfp_net",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/dbfp_net",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\dbfp_net\\test_predictions_dbfp_net.csv",
+    "original_prediction_sha256": "68bc2e9faa3cbe6e9b297fd8afd8bd6ab4fe0f91d84a809fa8771cf8a8442640",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "50517a34abb3d032919190c4652660eedde42ddf585b3adc5db8e92b476e6ce5",
+    "prediction_file": "predictions/comparison/101/dbfp_net.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "stgcn",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/stgcn",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\stgcn\\test_predictions_stgcn.csv",
+    "original_prediction_sha256": "731ec57a14e1593abdf76070a4f5c12694890d3df3151854c169eefcc2caf970",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "9c1d601d80cd6d018097bebed76f732e052db001affa4933de6759643479fe1d",
+    "prediction_file": "predictions/comparison/101/stgcn.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "agcrn",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/agcrn",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\agcrn\\test_predictions_agcrn.csv",
+    "original_prediction_sha256": "83f20d2c42f07164266df4b8e5e6a7ade95024b9de216df38c2235590ab72c68",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "08e341a7c70b98e9121af9c92d43fdc8014ffe6fcd95bf767d516cadf0ebc8c5",
+    "prediction_file": "predictions/comparison/101/agcrn.npz"
+  },
+  {
+    "study": "comparison",
+    "seed": 101,
+    "case": "stv_pgnn_adapted",
+    "primary_paper_seed": true,
+    "path": "experiments/comparison/seed_101/stv_pgnn_adapted",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\对比实验_101_20261120_223936\\seed_101\\stv_pgnn_adapted\\test_predictions_stv_pgnn_adapted.csv",
+    "original_prediction_sha256": "e6e1150f10318da92d5cf553d06b07e7f8115f387f0811d67df5ce8e1ba5e981",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "000aceaa940167829f77859202e943cb11c768a776a5a18de373596807daf94d",
+    "prediction_file": "predictions/comparison/101/stv_pgnn_adapted.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 84,
+    "case": "physical_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_84/physical_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_84\\physical_L3\\predictions.npz",
+    "original_prediction_sha256": "facf0a83b4e218306db99154b31f1375662480bbfae9ddfb6c2d68bd274809f8",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "9dd2b1dfbbfc07ed15a062630771ae9f3c351e1df22a77827fb77cec3a918527",
+    "prediction_file": "predictions/delay_window/84/physical_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 84,
+    "case": "fixed10_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_84/fixed10_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_84\\fixed10_L3\\predictions.npz",
+    "original_prediction_sha256": "ee8d13223238db20257d219ece60a94cc9b949951819c40dd4eab6525d792c6e",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "81cd04cec831f9c49b57429205d12e090d51b8dab084d17cde3159c4fd4d9875",
+    "prediction_file": "predictions/delay_window/84/fixed10_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 84,
+    "case": "fixed20_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_84/fixed20_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_84\\fixed20_L3\\predictions.npz",
+    "original_prediction_sha256": "be51ab8584079d07a86074227e3f039d6db638bbd9a5bd109584e05f4f200cf6",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "ad3e4db886555a8799a2868dc327a890fadc4718b9f26e65b752527f68226714",
+    "prediction_file": "predictions/delay_window/84/fixed20_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 84,
+    "case": "physical_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_84/physical_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_84\\physical_L13\\predictions.npz",
+    "original_prediction_sha256": "19cc248d3717a7ffc25f256d1ee40f7ad7d4f187f5da45e18c7aed04d272dca2",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "21e3f0ff67f7db559aa89638b236766bc5108903819f29a3b8fd0e6d33c6e54c",
+    "prediction_file": "predictions/delay_window/84/physical_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 84,
+    "case": "fixed10_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_84/fixed10_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_84\\fixed10_L13\\predictions.npz",
+    "original_prediction_sha256": "52a7bf3fbd7fa9dfb5d7c0d5b57e8890f16795b0df0300de3aa0759faa8b5a9b",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "fcdea9edce8288ab8ae0e5cfd157a77f9b61171e27ece5ec13ab3c3c5703e1fa",
+    "prediction_file": "predictions/delay_window/84/fixed10_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 84,
+    "case": "fixed20_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_84/fixed20_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_84\\fixed20_L13\\predictions.npz",
+    "original_prediction_sha256": "e3aa419ac221f01622a8eeb2bf61f82e7db63bba85de07e01124e21e3824e693",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "2d1be35d790a172d9bbbacbfb32b7b23c39224e95165fd52345890c3e3881b3f",
+    "prediction_file": "predictions/delay_window/84/fixed20_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 101,
+    "case": "physical_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_101/physical_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_101\\physical_L3\\predictions.npz",
+    "original_prediction_sha256": "d3bd71ca2417384bf79fc1bba20226471c342cb938dc38c309de4d3cea144387",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "9cd5b172f954a7b84801f059c8a157379a97dc8449a3b7a75a0fc23c066b6af4",
+    "prediction_file": "predictions/delay_window/101/physical_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 101,
+    "case": "fixed10_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_101/fixed10_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_101\\fixed10_L3\\predictions.npz",
+    "original_prediction_sha256": "dbeddb18553cb2a0e3119ae1d1835989ef7bf08b5b25ed01afa1f0c1a00691b1",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "529bc966a304e5aa51a4e0f581521d8cac5b9d06f061baec984a76b7b41cdf83",
+    "prediction_file": "predictions/delay_window/101/fixed10_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 101,
+    "case": "fixed20_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_101/fixed20_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_101\\fixed20_L3\\predictions.npz",
+    "original_prediction_sha256": "912ed244dfe10ddcf89c03a79b1eadbf3b599a16e5705b715d62d5f08d29ca07",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "5269020c2c3cc99bc9453a54b813f5ed168508b3d767a9dc8e28e8f963bf2430",
+    "prediction_file": "predictions/delay_window/101/fixed20_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 101,
+    "case": "physical_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_101/physical_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_101\\physical_L13\\predictions.npz",
+    "original_prediction_sha256": "ab403845f223de4ce65c4f5eb70ece61f8919d8904f13d08c58843cee8f11df4",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "40a0e24b0947fcf35b1970afb939b051c4070399cf3ae5f553accb5b0debbcb9",
+    "prediction_file": "predictions/delay_window/101/physical_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 101,
+    "case": "fixed10_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_101/fixed10_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_101\\fixed10_L13\\predictions.npz",
+    "original_prediction_sha256": "dfcf05124e38a87ec285c3098870c07e7041d2f00406b873c86ef8e175ee9e1e",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "93ab796ddd4e0b6052e861a56ca6e840be4221de3d74ca9a91a5db9444e257e9",
+    "prediction_file": "predictions/delay_window/101/fixed10_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 101,
+    "case": "fixed20_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_101/fixed20_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_101\\fixed20_L13\\predictions.npz",
+    "original_prediction_sha256": "da264b4cf481c508844d4a182a8c847681e7a430e4e3675ae5d8dcc18c8ca5a4",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "8c975070dfcf2fb555b0618523737ad235b52b3c7cb1b9e70f98a67801619cfd",
+    "prediction_file": "predictions/delay_window/101/fixed20_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 1234,
+    "case": "physical_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_1234/physical_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_1234\\physical_L3\\predictions.npz",
+    "original_prediction_sha256": "c7d825d9bd849a93bf06befe2d3dce7a13762b534493e5585416a150d2334e4f",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "feea56c5ee61c856d76010acd6262812cbc0d6606966528fe24a19f7f68cbd0e",
+    "prediction_file": "predictions/delay_window/1234/physical_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 1234,
+    "case": "fixed10_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_1234/fixed10_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_1234\\fixed10_L3\\predictions.npz",
+    "original_prediction_sha256": "6837c63b4957dca5986e9d67ea8b0e9a07b46d50e69ead4d8943bc7fbe1875a2",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "e66b09ce575059c49ec8eb505e8eb1b065696ecc4aa8cfe59b2d5d2633c48ab6",
+    "prediction_file": "predictions/delay_window/1234/fixed10_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 1234,
+    "case": "fixed20_L3",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_1234/fixed20_L3",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_1234\\fixed20_L3\\predictions.npz",
+    "original_prediction_sha256": "26a8b534d921186fd5ac1e566bb43ce6d783924a3b619f0c381fe4add8451442",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "9a89cf6902674f70bfe944d3bf89faac9411b21c4e67de8f0d41e51a2f5fb2d7",
+    "prediction_file": "predictions/delay_window/1234/fixed20_L3.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 1234,
+    "case": "physical_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_1234/physical_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_1234\\physical_L13\\predictions.npz",
+    "original_prediction_sha256": "ea9ab923b596cb0e243db97dd89011159342ba7312f682cae19ea1ed46c7980c",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "097c91aaaf3be5cd1c74a87e31f76e84cdb01c2fd42b02598d93af230e1c4b22",
+    "prediction_file": "predictions/delay_window/1234/physical_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 1234,
+    "case": "fixed10_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_1234/fixed10_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_1234\\fixed10_L13\\predictions.npz",
+    "original_prediction_sha256": "04b3a40ba0da552aacc086578d83dfc1dcd6b9ba753819001731173c743b9e14",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "002d8c7828436b5a13e9d849cae8d03e42b37dc5b132f33fdc72d705bcd9986a",
+    "prediction_file": "predictions/delay_window/1234/fixed10_L13.npz"
+  },
+  {
+    "study": "delay_window",
+    "seed": 1234,
+    "case": "fixed20_L13",
+    "primary_paper_seed": true,
+    "path": "experiments/delay_window/seed_1234/fixed20_L13",
+    "shape": [
+      7517,
+      134,
+      6
+    ],
+    "original_prediction_path": "C:\\Users\\Administrator\\Desktop\\project_root\\延迟历史窗口对照_84_101_1234_20261122_152532\\seed_1234\\fixed20_L13\\predictions.npz",
+    "original_prediction_sha256": "95e7aee0a81838c70bd89cedf8f24473ac39bfbfb29a6107e6b417c57b211396",
+    "raw_valid_target_pairs": 3753533,
+    "raw_complete_farm_pairs": 8541,
+    "source_forecast_sha256": "464845a8fa71bf24132f0918cbc513b5e2a3b26b4c3d82dd0b45f0ef995306da",
+    "prediction_file": "predictions/delay_window/1234/fixed20_L13.npz"
+  }
+]

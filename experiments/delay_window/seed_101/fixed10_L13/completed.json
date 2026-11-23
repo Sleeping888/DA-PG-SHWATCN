@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "fixed10_L13",
+  "exit_code": 0,
+  "elapsed_seconds": 1525.7097680568695,
+  "finished_at": "2026-11-22T17:53:04.569384+08:00",
+  "summary_sha256": "8b791537db3f812deebdca8bcc8cf44afc803deebc4f3b04120a13210eef1700"
+}

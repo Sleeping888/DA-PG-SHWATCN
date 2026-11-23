@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "models": 9,
+  "seeds": [
+    84,
+    101,
+    1234
+  ],
+  "runs": 27,
+  "source_sha256": "dfe51c281204fd9a2a0aba748bff0608435b3e4df311d9067cccf36eafe0f157",
+  "runner_sha256": "dcd450e049ac6372ed51da4a65209c4bf997eee9162b18fef35e3869fad139f4",
+  "new_training": false
+}

@@ -1,0 +1,71 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\transformer
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: transformer
+################################################################################
+[Cache] verified original preprocessing; {'train': 35075, 'val': 7516, 'test': 7517}
+[transformer] model=Transformer, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+C:\Users\Administrator\Desktop\project_root\.venv\Lib\site-packages\torch\nn\functional.py:5560: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:555.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+[transformer] epoch 001 | loss=0.023572 | node_loss=0.021888 | farm_loss=0.012955 | val_node_avg_RMSE=167.381 kW | val_farm_avg_RMSE=17061.663 kW
+[transformer] epoch 002 | loss=0.018968 | node_loss=0.017663 | farm_loss=0.010039 | val_node_avg_RMSE=165.970 kW | val_farm_avg_RMSE=16940.497 kW
+[transformer] epoch 003 | loss=0.018645 | node_loss=0.017356 | farm_loss=0.009912 | val_node_avg_RMSE=165.913 kW | val_farm_avg_RMSE=16884.348 kW
+[transformer] epoch 004 | loss=0.018488 | node_loss=0.017207 | farm_loss=0.009852 | val_node_avg_RMSE=165.371 kW | val_farm_avg_RMSE=16608.037 kW
+[transformer] epoch 005 | loss=0.018401 | node_loss=0.017124 | farm_loss=0.009821 | val_node_avg_RMSE=166.637 kW | val_farm_avg_RMSE=17133.897 kW
+[transformer] epoch 006 | loss=0.018247 | node_loss=0.016984 | farm_loss=0.009717 | val_node_avg_RMSE=164.583 kW | val_farm_avg_RMSE=16666.215 kW
+[transformer] epoch 007 | loss=0.018236 | node_loss=0.016972 | farm_loss=0.009722 | val_node_avg_RMSE=164.331 kW | val_farm_avg_RMSE=16490.137 kW
+[transformer] epoch 008 | loss=0.018149 | node_loss=0.016894 | farm_loss=0.009655 | val_node_avg_RMSE=177.234 kW | val_farm_avg_RMSE=18927.408 kW
+[transformer] epoch 009 | loss=0.018113 | node_loss=0.016861 | farm_loss=0.009633 | val_node_avg_RMSE=165.235 kW | val_farm_avg_RMSE=16708.173 kW
+[transformer] epoch 010 | loss=0.018076 | node_loss=0.016827 | farm_loss=0.009606 | val_node_avg_RMSE=168.350 kW | val_farm_avg_RMSE=17390.067 kW
+[transformer] epoch 011 | loss=0.018069 | node_loss=0.016820 | farm_loss=0.009604 | val_node_avg_RMSE=164.216 kW | val_farm_avg_RMSE=16532.236 kW
+[transformer] epoch 012 | loss=0.018026 | node_loss=0.016783 | farm_loss=0.009559 | val_node_avg_RMSE=164.459 kW | val_farm_avg_RMSE=16552.308 kW
+[transformer] epoch 013 | loss=0.018016 | node_loss=0.016772 | farm_loss=0.009568 | val_node_avg_RMSE=165.184 kW | val_farm_avg_RMSE=16567.088 kW
+[transformer] epoch 014 | loss=0.017968 | node_loss=0.016728 | farm_loss=0.009538 | val_node_avg_RMSE=164.780 kW | val_farm_avg_RMSE=16554.354 kW
+[transformer] epoch 015 | loss=0.017948 | node_loss=0.016711 | farm_loss=0.009522 | val_node_avg_RMSE=166.780 kW | val_farm_avg_RMSE=17130.341 kW
+[transformer] epoch 016 | loss=0.017937 | node_loss=0.016700 | farm_loss=0.009516 | val_node_avg_RMSE=165.096 kW | val_farm_avg_RMSE=16742.199 kW
+[transformer] epoch 017 | loss=0.017907 | node_loss=0.016674 | farm_loss=0.009488 | val_node_avg_RMSE=163.684 kW | val_farm_avg_RMSE=16452.133 kW
+[transformer] epoch 018 | loss=0.017884 | node_loss=0.016651 | farm_loss=0.009479 | val_node_avg_RMSE=163.868 kW | val_farm_avg_RMSE=16414.391 kW
+[transformer] epoch 019 | loss=0.017849 | node_loss=0.016620 | farm_loss=0.009451 | val_node_avg_RMSE=163.687 kW | val_farm_avg_RMSE=16401.528 kW
+[transformer] epoch 020 | loss=0.017874 | node_loss=0.016643 | farm_loss=0.009471 | val_node_avg_RMSE=164.208 kW | val_farm_avg_RMSE=16587.667 kW
+[transformer] epoch 021 | loss=0.017831 | node_loss=0.016604 | farm_loss=0.009436 | val_node_avg_RMSE=163.643 kW | val_farm_avg_RMSE=16546.821 kW
+[transformer] epoch 022 | loss=0.017817 | node_loss=0.016591 | farm_loss=0.009434 | val_node_avg_RMSE=163.772 kW | val_farm_avg_RMSE=16344.382 kW
+[transformer] epoch 023 | loss=0.017792 | node_loss=0.016571 | farm_loss=0.009395 | val_node_avg_RMSE=164.749 kW | val_farm_avg_RMSE=16808.827 kW
+[transformer] epoch 024 | loss=0.017794 | node_loss=0.016569 | farm_loss=0.009419 | val_node_avg_RMSE=164.344 kW | val_farm_avg_RMSE=16325.656 kW
+[transformer] epoch 025 | loss=0.017804 | node_loss=0.016579 | farm_loss=0.009419 | val_node_avg_RMSE=164.313 kW | val_farm_avg_RMSE=16622.357 kW
+[transformer] epoch 026 | loss=0.017771 | node_loss=0.016550 | farm_loss=0.009392 | val_node_avg_RMSE=164.966 kW | val_farm_avg_RMSE=16687.243 kW
+[transformer] epoch 027 | loss=0.017768 | node_loss=0.016547 | farm_loss=0.009392 | val_node_avg_RMSE=164.943 kW | val_farm_avg_RMSE=16797.198 kW
+[transformer] epoch 028 | loss=0.017756 | node_loss=0.016536 | farm_loss=0.009385 | val_node_avg_RMSE=163.713 kW | val_farm_avg_RMSE=16494.663 kW
+[transformer] epoch 029 | loss=0.017725 | node_loss=0.016508 | farm_loss=0.009362 | val_node_avg_RMSE=164.375 kW | val_farm_avg_RMSE=16623.346 kW
+[transformer] early stop at epoch 29
+[transformer] Test h1 node RMSE=67.426, MAE=36.958, nRMSE=4.495%, nMAE=2.464%, WAPE=16.453%, R2=0.9617
+[transformer] Test h1 farm RMSE=4750.567, MAE=2637.015, nRMSE=2.363%, nMAE=1.312%, WAPE=8.761%, R2=0.9882
+[transformer] Test h2 node RMSE=92.906, MAE=52.167, nRMSE=6.194%, nMAE=3.478%, WAPE=23.226%, R2=0.9272
+[transformer] Test h2 farm RMSE=7701.732, MAE=4458.760, nRMSE=3.832%, nMAE=2.218%, WAPE=14.814%, R2=0.9691
+[transformer] Test h3 node RMSE=109.683, MAE=63.199, nRMSE=7.312%, nMAE=4.213%, WAPE=28.140%, R2=0.8985
+[transformer] Test h3 farm RMSE=9894.046, MAE=5911.127, nRMSE=4.922%, nMAE=2.941%, WAPE=19.642%, R2=0.9490
+[transformer] Test h4 node RMSE=122.983, MAE=72.512, nRMSE=8.199%, nMAE=4.834%, WAPE=32.290%, R2=0.8724
+[transformer] Test h4 farm RMSE=11686.092, MAE=7185.535, nRMSE=5.814%, nMAE=3.575%, WAPE=23.879%, R2=0.9288
+[transformer] Test h5 node RMSE=133.899, MAE=80.460, nRMSE=8.927%, nMAE=5.364%, WAPE=35.831%, R2=0.8488
+[transformer] Test h5 farm RMSE=13233.656, MAE=8272.561, nRMSE=6.584%, nMAE=4.116%, WAPE=27.493%, R2=0.9087
+[transformer] Test h6 node RMSE=143.644, MAE=87.547, nRMSE=9.576%, nMAE=5.836%, WAPE=38.990%, R2=0.8260
+[transformer] Test h6 farm RMSE=14607.036, MAE=9235.279, nRMSE=7.267%, nMAE=4.595%, WAPE=30.694%, R2=0.8888
+[transformer] Test AVG node RMSE=114.670, MAE=65.474, nRMSE=7.645%, nMAE=4.365%, WAPE=29.154%, R2=0.8891
+[transformer] Test AVG farm RMSE=10838.485, MAE=6283.379, nRMSE=5.392%, nMAE=3.126%, WAPE=20.879%, R2=0.9388
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+       case       model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE    farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+transformer Transformer     t+1  67.426017 36.957526       4.495068      2.463835     16.452549 0.961652  4750.566909 2637.015356       2.363466      1.311948      8.760687 0.988237
+transformer Transformer     t+2  92.906097 52.167117       6.193740      3.477808     23.225850 0.927196  7701.731843 4458.759945       3.831707      2.218289     14.814400 0.969084
+transformer Transformer     t+3 109.683457 63.198901       7.312230      4.213260     28.140079 0.898531  9894.046014 5911.127087       4.922411      2.940859     19.641800 0.948981
+transformer Transformer     t+4 122.982629 72.512067       8.198842      4.834138     32.289681 0.872439 11686.091987 7185.535248       5.813976      3.574893     23.878541 0.928829
+transformer Transformer     t+5 133.898564 80.459845       8.926571      5.363990     35.831356 0.848795 13233.655738 8272.560751       6.583908      4.115702     27.492815 0.908735
+transformer Transformer     t+6 143.644201 87.547205       9.576280      5.836480     38.990015 0.825990 14607.036350 9235.278856       7.267182      4.594666     30.694201 0.888813
+transformer Transformer     avg 114.670165 65.473777       7.644678      4.364918     29.153832 0.889097 10838.485330 6283.379452       5.392281      3.126059     20.879339 0.938777
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\transformer\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\transformer\summary_results_by_horizon.csv
+================================================================================

@@ -1,0 +1,15 @@
+{
+  "source_sha256": "dfe51c281204fd9a2a0aba748bff0608435b3e4df311d9067cccf36eafe0f157",
+  "files": {
+    "features.npy": "412f79b26a5b16d623a9532115b480dfa95ff534a9e18aea548ed4d86b7d6c07",
+    "normalization_mean.npy": "863718c35e1efda77b15ef4e3683e2489b1856867aaa175f0d8148785c42853d",
+    "normalization_std.npy": "42a859ffe8e662915ef6436135e35401086db269d4e545276c1362ea39853055",
+    "test_observed_kw.npy": "f44872e3b87506f54c1fddca191964a95812bea9b1e0fd297ca5578fedab965c",
+    "times.npy": "a44c1a6bb75c0945cf7e1ae818efc017bf4367644bd71d1bb531c314a65603a7"
+  },
+  "normalization_exactly_matches_original_L3_cache": true,
+  "observed_target_count": 3753533,
+  "train_windows": 35065,
+  "val_windows": 7516,
+  "test_windows": 7517
+}

@@ -1,0 +1,75 @@
+================================================================================
+软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT
+device=cuda, out_dir=C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\agcrn
+说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。
+================================================================================
+
+################################################################################
+开始实验: agcrn
+################################################################################
+[Cache] verified original preprocessing; {'train': 35075, 'val': 7516, 'test': 7517}
+[agcrn] model=AGCRN, time_batch_size=30, window=3, tcn_layers=1, heads=2, top_k=8, hetero_gate_alpha=1.500, adaptive_alpha=0.300, adaptive_top_k=24, delay=1, delay_max=2, fusion=1, farm_loss_weight=0.1300
+[agcrn] epoch 001 | loss=0.023807 | node_loss=0.022137 | farm_loss=0.012842 | val_node_avg_RMSE=169.309 kW | val_farm_avg_RMSE=17641.063 kW
+[agcrn] epoch 002 | loss=0.018396 | node_loss=0.017114 | farm_loss=0.009861 | val_node_avg_RMSE=160.233 kW | val_farm_avg_RMSE=16333.544 kW
+[agcrn] epoch 003 | loss=0.017468 | node_loss=0.016246 | farm_loss=0.009405 | val_node_avg_RMSE=157.625 kW | val_farm_avg_RMSE=16040.409 kW
+[agcrn] epoch 004 | loss=0.017043 | node_loss=0.015849 | farm_loss=0.009187 | val_node_avg_RMSE=163.346 kW | val_farm_avg_RMSE=17136.340 kW
+[agcrn] epoch 005 | loss=0.016860 | node_loss=0.015673 | farm_loss=0.009127 | val_node_avg_RMSE=157.959 kW | val_farm_avg_RMSE=16188.838 kW
+[agcrn] epoch 006 | loss=0.016670 | node_loss=0.015497 | farm_loss=0.009023 | val_node_avg_RMSE=157.008 kW | val_farm_avg_RMSE=16100.458 kW
+[agcrn] epoch 007 | loss=0.016563 | node_loss=0.015396 | farm_loss=0.008972 | val_node_avg_RMSE=158.837 kW | val_farm_avg_RMSE=16477.623 kW
+[agcrn] epoch 008 | loss=0.016468 | node_loss=0.015309 | farm_loss=0.008920 | val_node_avg_RMSE=156.272 kW | val_farm_avg_RMSE=16028.841 kW
+[agcrn] epoch 009 | loss=0.016296 | node_loss=0.015152 | farm_loss=0.008801 | val_node_avg_RMSE=161.531 kW | val_farm_avg_RMSE=17005.366 kW
+[agcrn] epoch 010 | loss=0.016279 | node_loss=0.015135 | farm_loss=0.008799 | val_node_avg_RMSE=154.845 kW | val_farm_avg_RMSE=15909.959 kW
+[agcrn] epoch 011 | loss=0.016196 | node_loss=0.015060 | farm_loss=0.008744 | val_node_avg_RMSE=155.886 kW | val_farm_avg_RMSE=16034.723 kW
+[agcrn] epoch 012 | loss=0.016162 | node_loss=0.015029 | farm_loss=0.008721 | val_node_avg_RMSE=155.532 kW | val_farm_avg_RMSE=16000.429 kW
+[agcrn] epoch 013 | loss=0.016085 | node_loss=0.014958 | farm_loss=0.008669 | val_node_avg_RMSE=159.885 kW | val_farm_avg_RMSE=16777.737 kW
+[agcrn] epoch 014 | loss=0.016036 | node_loss=0.014912 | farm_loss=0.008645 | val_node_avg_RMSE=154.633 kW | val_farm_avg_RMSE=15852.033 kW
+[agcrn] epoch 015 | loss=0.015976 | node_loss=0.014858 | farm_loss=0.008599 | val_node_avg_RMSE=156.182 kW | val_farm_avg_RMSE=16174.682 kW
+[agcrn] epoch 016 | loss=0.015943 | node_loss=0.014827 | farm_loss=0.008581 | val_node_avg_RMSE=155.204 kW | val_farm_avg_RMSE=15956.685 kW
+[agcrn] epoch 017 | loss=0.015932 | node_loss=0.014819 | farm_loss=0.008562 | val_node_avg_RMSE=155.534 kW | val_farm_avg_RMSE=15997.930 kW
+[agcrn] epoch 018 | loss=0.015864 | node_loss=0.014755 | farm_loss=0.008524 | val_node_avg_RMSE=154.558 kW | val_farm_avg_RMSE=15866.588 kW
+[agcrn] epoch 019 | loss=0.015821 | node_loss=0.014716 | farm_loss=0.008495 | val_node_avg_RMSE=156.335 kW | val_farm_avg_RMSE=16173.154 kW
+[agcrn] epoch 020 | loss=0.015777 | node_loss=0.014677 | farm_loss=0.008464 | val_node_avg_RMSE=155.275 kW | val_farm_avg_RMSE=15992.262 kW
+[agcrn] epoch 021 | loss=0.015801 | node_loss=0.014698 | farm_loss=0.008485 | val_node_avg_RMSE=155.403 kW | val_farm_avg_RMSE=15966.588 kW
+[agcrn] epoch 022 | loss=0.015696 | node_loss=0.014603 | farm_loss=0.008403 | val_node_avg_RMSE=155.572 kW | val_farm_avg_RMSE=16047.191 kW
+[agcrn] epoch 023 | loss=0.015694 | node_loss=0.014601 | farm_loss=0.008412 | val_node_avg_RMSE=154.389 kW | val_farm_avg_RMSE=15843.377 kW
+[agcrn] epoch 024 | loss=0.015646 | node_loss=0.014558 | farm_loss=0.008370 | val_node_avg_RMSE=155.782 kW | val_farm_avg_RMSE=16127.361 kW
+[agcrn] epoch 025 | loss=0.015633 | node_loss=0.014546 | farm_loss=0.008361 | val_node_avg_RMSE=155.654 kW | val_farm_avg_RMSE=16023.004 kW
+[agcrn] epoch 026 | loss=0.015630 | node_loss=0.014544 | farm_loss=0.008358 | val_node_avg_RMSE=154.029 kW | val_farm_avg_RMSE=15774.614 kW
+[agcrn] epoch 027 | loss=0.015545 | node_loss=0.014468 | farm_loss=0.008288 | val_node_avg_RMSE=153.972 kW | val_farm_avg_RMSE=15798.520 kW
+[agcrn] epoch 028 | loss=0.015511 | node_loss=0.014437 | farm_loss=0.008259 | val_node_avg_RMSE=155.172 kW | val_farm_avg_RMSE=15997.152 kW
+[agcrn] epoch 029 | loss=0.015480 | node_loss=0.014409 | farm_loss=0.008241 | val_node_avg_RMSE=154.337 kW | val_farm_avg_RMSE=15877.544 kW
+[agcrn] epoch 030 | loss=0.015439 | node_loss=0.014372 | farm_loss=0.008206 | val_node_avg_RMSE=154.227 kW | val_farm_avg_RMSE=15823.407 kW
+[agcrn] epoch 031 | loss=0.015414 | node_loss=0.014350 | farm_loss=0.008190 | val_node_avg_RMSE=154.569 kW | val_farm_avg_RMSE=15939.923 kW
+[agcrn] epoch 032 | loss=0.015410 | node_loss=0.014347 | farm_loss=0.008178 | val_node_avg_RMSE=154.668 kW | val_farm_avg_RMSE=15897.930 kW
+[agcrn] epoch 033 | loss=0.015349 | node_loss=0.014293 | farm_loss=0.008124 | val_node_avg_RMSE=156.946 kW | val_farm_avg_RMSE=16323.269 kW
+[agcrn] epoch 034 | loss=0.015303 | node_loss=0.014251 | farm_loss=0.008091 | val_node_avg_RMSE=154.563 kW | val_farm_avg_RMSE=15898.065 kW
+[agcrn] epoch 035 | loss=0.015277 | node_loss=0.014228 | farm_loss=0.008069 | val_node_avg_RMSE=155.893 kW | val_farm_avg_RMSE=16081.993 kW
+[agcrn] early stop at epoch 35
+[agcrn] Test h1 node RMSE=64.899, MAE=36.076, nRMSE=4.327%, nMAE=2.405%, WAPE=16.060%, R2=0.9645
+[agcrn] Test h1 farm RMSE=4467.803, MAE=2586.971, nRMSE=2.223%, nMAE=1.287%, WAPE=8.594%, R2=0.9896
+[agcrn] Test h2 node RMSE=87.473, MAE=48.835, nRMSE=5.832%, nMAE=3.256%, WAPE=21.742%, R2=0.9355
+[agcrn] Test h2 farm RMSE=7216.924, MAE=4045.029, nRMSE=3.591%, nMAE=2.012%, WAPE=13.440%, R2=0.9729
+[agcrn] Test h3 node RMSE=103.569, MAE=58.737, nRMSE=6.905%, nMAE=3.916%, WAPE=26.153%, R2=0.9095
+[agcrn] Test h3 farm RMSE=9435.281, MAE=5371.588, nRMSE=4.694%, nMAE=2.672%, WAPE=17.849%, R2=0.9536
+[agcrn] Test h4 node RMSE=116.586, MAE=66.897, nRMSE=7.772%, nMAE=4.460%, WAPE=29.789%, R2=0.8854
+[agcrn] Test h4 farm RMSE=11246.265, MAE=6510.518, nRMSE=5.595%, nMAE=3.239%, WAPE=21.635%, R2=0.9341
+[agcrn] Test h5 node RMSE=127.450, MAE=74.721, nRMSE=8.497%, nMAE=4.981%, WAPE=33.276%, R2=0.8630
+[agcrn] Test h5 farm RMSE=12789.319, MAE=7594.394, nRMSE=6.363%, nMAE=3.778%, WAPE=25.239%, R2=0.9148
+[agcrn] Test h6 node RMSE=137.164, MAE=82.609, nRMSE=9.144%, nMAE=5.507%, WAPE=36.791%, R2=0.8413
+[agcrn] Test h6 farm RMSE=14162.096, MAE=8677.810, nRMSE=7.046%, nMAE=4.317%, WAPE=28.841%, R2=0.8955
+[agcrn] Test AVG node RMSE=108.965, MAE=61.312, nRMSE=7.264%, nMAE=4.087%, WAPE=27.301%, R2=0.8999
+[agcrn] Test AVG farm RMSE=10421.771, MAE=5797.718, nRMSE=5.185%, nMAE=2.884%, WAPE=19.266%, R2=0.9434
+
+================================================================================
+全部实验完成，按预测步长汇总结果：
+ case model horizon  node_RMSE  node_MAE  node_nRMSE(%)  node_nMAE(%)  node_WAPE(%)  node_R2    farm_RMSE    farm_MAE  farm_nRMSE(%)  farm_nMAE(%)  farm_WAPE(%)  farm_R2
+agcrn AGCRN     t+1  64.899213 36.076038       4.326614      2.405069     16.060134 0.964472  4467.803202 2586.971339       2.222788      1.287050      8.594431 0.989596
+agcrn AGCRN     t+2  87.473412 48.834968       5.831561      3.255665     21.742310 0.935461  7216.924160 4045.029321       3.590510      2.012452     13.439764 0.972854
+agcrn AGCRN     t+3 103.568893 58.736652       6.904593      3.915777     26.153209 0.909529  9435.280881 5371.588218       4.694170      2.672432     17.848992 0.953602
+agcrn AGCRN     t+4 116.585797 66.896723       7.772386      4.459782     29.789164 0.885364 11246.265466 6510.518104       5.595157      3.239064     21.635365 0.934086
+agcrn AGCRN     t+5 127.449717 74.721404       8.496648      4.981427     33.275843 0.863009 12789.318990 7594.394038       6.362845      3.778305     25.239014 0.914761
+agcrn AGCRN     t+6 137.163688 82.608543       9.144246      5.507236     36.790533 0.841337 14162.096295 8677.809891       7.045819      4.317318     28.841407 0.895484
+agcrn AGCRN     avg 108.964503 61.312388       7.264300      4.087493     27.300870 0.899859 10421.771173 5797.718257       5.184961      2.884437     19.265512 0.943394
+完整宽表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\agcrn\summary_results.csv
+论文主表长表已保存: C:\Users\Administrator\Desktop\project_root\对比实验_1234_21_42_84_20261119_164746\seed_1234\agcrn\summary_results_by_horizon.csv
+================================================================================

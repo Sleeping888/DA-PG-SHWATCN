@@ -1,0 +1,8 @@
+{
+  "seed": 84,
+  "model": "stv_pgnn_adapted",
+  "exit_code": 0,
+  "elapsed_seconds": 1635.7216668128967,
+  "finished_at": "2026-11-19T21:09:28.475218+08:00",
+  "summary_sha256": "b539240f1469d15945609aa1e5f94eeef75be6eaea53551b5644ecf62bd14b49"
+}

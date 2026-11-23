@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "runs": 27,
+  "seeds": [
+    84,
+    101,
+    1234
+  ],
+  "warmup": 30,
+  "rounds": 3,
+  "iterations": 100,
+  "batch": 1,
+  "history": 3,
+  "turbines": 134,
+  "horizon": 6,
+  "training_time_is_pure_training": false,
+  "runner_sha256": "3ad8c8365eb72df1d5395484d05be07b4a8c038350ef4867a8efb6f67bd43054"
+}

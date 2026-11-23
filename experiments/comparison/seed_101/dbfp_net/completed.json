@@ -1,0 +1,8 @@
+{
+  "seed": 101,
+  "model": "dbfp_net",
+  "exit_code": 0,
+  "elapsed_seconds": 530.3680605888367,
+  "finished_at": "2026-11-20T23:15:04.942288+08:00",
+  "summary_sha256": "05545befe52a0546a0b1c86271e2d4b805c28b1d10c280e54fa9e5a2deff4907"
+}

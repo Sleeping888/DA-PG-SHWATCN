@@ -1,0 +1,107 @@
+{
+  "possible_target_pairs": 6043668,
+  "valid_target_pairs": 3753533,
+  "excluded_target_pairs": 2290135,
+  "complete_farm_pairs": 8541,
+  "valid_targets_above_original_2250kw_clip": 0,
+  "strata": [
+    {
+      "kind": "full_gap",
+      "group": "无缺失",
+      "observed_target_pairs": 3394630,
+      "turbine_origin_pairs": 600199
+    },
+    {
+      "kind": "full_gap",
+      "group": "0–30min",
+      "observed_target_pairs": 56319,
+      "turbine_origin_pairs": 11118
+    },
+    {
+      "kind": "full_gap",
+      "group": "30–60min",
+      "observed_target_pairs": 39587,
+      "turbine_origin_pairs": 9153
+    },
+    {
+      "kind": "full_gap",
+      "group": "60–180min",
+      "observed_target_pairs": 97043,
+      "turbine_origin_pairs": 42692
+    },
+    {
+      "kind": "full_gap",
+      "group": "180–1440min",
+      "observed_target_pairs": 162564,
+      "turbine_origin_pairs": 317720
+    },
+    {
+      "kind": "full_gap",
+      "group": ">1440min",
+      "observed_target_pairs": 3390,
+      "turbine_origin_pairs": 26396
+    },
+    {
+      "kind": "elapsed_age",
+      "group": "无缺失",
+      "observed_target_pairs": 3394630,
+      "turbine_origin_pairs": 600199
+    },
+    {
+      "kind": "elapsed_age",
+      "group": "0–30min",
+      "observed_target_pairs": 69859,
+      "turbine_origin_pairs": 41290
+    },
+    {
+      "kind": "elapsed_age",
+      "group": "30–60min",
+      "observed_target_pairs": 38231,
+      "turbine_origin_pairs": 31421
+    },
+    {
+      "kind": "elapsed_age",
+      "group": "60–180min",
+      "observed_target_pairs": 89919,
+      "turbine_origin_pairs": 90084
+    },
+    {
+      "kind": "elapsed_age",
+      "group": "180–1440min",
+      "observed_target_pairs": 157577,
+      "turbine_origin_pairs": 234580
+    },
+    {
+      "kind": "elapsed_age",
+      "group": ">1440min",
+      "observed_target_pairs": 3317,
+      "turbine_origin_pairs": 9704
+    }
+  ],
+  "fields": {
+    "Wspd": {
+      "invalid_cells": 353357,
+      "gap_runs": 13344,
+      "longest_gap_minutes": 19960,
+      "max_elapsed_missing_minutes": 19960
+    },
+    "Wdir": {
+      "invalid_cells": 353292,
+      "gap_runs": 13335,
+      "longest_gap_minutes": 19960,
+      "max_elapsed_missing_minutes": 19960
+    },
+    "Ndir": {
+      "invalid_cells": 353292,
+      "gap_runs": 13335,
+      "longest_gap_minutes": 19960,
+      "max_elapsed_missing_minutes": 19960
+    },
+    "Patv": {
+      "invalid_cells": 2209677,
+      "gap_runs": 123303,
+      "longest_gap_minutes": 19960,
+      "max_elapsed_missing_minutes": 19960
+    }
+  }
+}
