@@ -34,6 +34,11 @@ https://doi.org/10.6084/m9.figshare.24798654 and rebuild with `code/as_run` and 
 chronological and not purged, so five target timestamps overlap at each boundary
 (`splits/definitions.json`); the retained time axis contains 59 intervals that are not 10 minutes.
 
+## Figures
+
+`figures/` holds the print-ready files for Figures 1-8 and the graphical abstract at 300 dpi and
+177 mm width, together with the editable source of Figure 1.
+
 ## Runs and variants
 
 `code/as_run/<study>/runner.py` reproduces a study from its `plan.json`. Two variants that the code
