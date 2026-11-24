@@ -1996,18 +1996,13 @@
   },
   {
     "path": "figures/README.md",
-    "bytes": 979,
-    "sha256": "c728d46393f862fa866155898cf20c822131be31b28346f812a11f87bd99d7fb"
-  },
-  {
-    "path": "figures/graphical_abstract.svg",
-    "bytes": 24437,
-    "sha256": "7d06311c6affe074352511c85e362f26db0c12b37eb72cf39ab4ff8f3a400aeb"
+    "bytes": 1011,
+    "sha256": "5e827e7b9345cc658e744ccb331c370f38cad15e28c3832630a52c2a06c13494"
   },
   {
     "path": "figures/graphical_abstract.tif",
-    "bytes": 281296,
-    "sha256": "06461eae6d5ded63660bda8fcb2052cabccb45fe93f9150388fe203579e11129"
+    "bytes": 1672288,
+    "sha256": "a715e078b30d43b57c63ddfba380da034e10e6e1004d4d523c50a9aaecb7bc21"
   },
   {
     "path": "predictions/comparison/101/agcrn.npz",
