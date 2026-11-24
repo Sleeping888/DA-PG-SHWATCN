@@ -2001,13 +2001,13 @@
   },
   {
     "path": "figures/graphical_abstract.svg",
-    "bytes": 3066,
-    "sha256": "0d6d3fd0985cb83912189a2230c46802ea065edfeb3a43a6b3eeb7a11335eff0"
+    "bytes": 24437,
+    "sha256": "7d06311c6affe074352511c85e362f26db0c12b37eb72cf39ab4ff8f3a400aeb"
   },
   {
     "path": "figures/graphical_abstract.tif",
-    "bytes": 539820,
-    "sha256": "9593976eb2c4f736cf5cab6c066189442ef1af2497f7db0ee659c088fda39c8e"
+    "bytes": 281296,
+    "sha256": "06461eae6d5ded63660bda8fcb2052cabccb45fe93f9150388fe203579e11129"
   },
   {
     "path": "predictions/comparison/101/agcrn.npz",
