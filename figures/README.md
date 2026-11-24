@@ -1,7 +1,7 @@
 # Manuscript figures
 
 Print-ready files supplied to the journal at 300 dpi. Figures 1-8 are 177 mm wide (2091 px); the
-graphical abstract is 167.9 mm wide (1983 px) and is supplied as a single raster image.
+graphical abstract is 155.7 mm wide (1839 px) and is supplied as a single raster image.
 
 | File | Content |
 |---|---|

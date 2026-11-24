@@ -1997,12 +1997,12 @@
   {
     "path": "figures/README.md",
     "bytes": 1011,
-    "sha256": "5e827e7b9345cc658e744ccb331c370f38cad15e28c3832630a52c2a06c13494"
+    "sha256": "f961cc909c82509efec7f0188b032ce77d1cdfb151d00854d5f2dc156d1b3943"
   },
   {
     "path": "figures/graphical_abstract.tif",
-    "bytes": 1672288,
-    "sha256": "a715e078b30d43b57c63ddfba380da034e10e6e1004d4d523c50a9aaecb7bc21"
+    "bytes": 1755416,
+    "sha256": "a5119253e44a65bea25a5a6338c915ea64d4fa1edb1631e3eee11aa25719caec"
   },
   {
     "path": "predictions/comparison/101/agcrn.npz",
