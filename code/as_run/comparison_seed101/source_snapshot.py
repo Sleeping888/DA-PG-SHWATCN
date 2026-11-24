@@ -1,26 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-SDWPF 软异构动态尾流图 + 三尾流物理模型 + 轻量版 TCN-Wake-GAT 预测脚本
+"""SDWPF 多步风电功率预测与对比实验。
 
-目的：
-1) 在轻量 Wake-GAT 基础上加入 TCN 时间编码，仍去掉 Transformer、PIA、残差预测、气象外生增强和线性校准；
-2) 只保留论文核心：动态尾流图、Niayifar/Jensen-like + BPA + Jimenez 三物理尾流公式；
-3) 将原来的硬 one-hot 异构类型改为连续软异构角色特征；
-4) 降低输入维度，减少冗余特征对 MLP 结果的干扰；
-5) 新增 farm-level auxiliary loss，用于约束全场总功率误差。
+主模型结合 TCN、动态尾流启发图、传播延迟、软异构角色门控和自适应图；
+可通过 --experiments 选择消融与对比模型。输出各步预测、指标和训练记录。
+默认数据路径指向当前用户桌面的“project_root/SDWPF”，也可由命令行覆盖。
 
-默认运行 3 组对比，并输出 1..pred_horizon 每一步结果：
-- full：低维局部特征 + 三尾流动态图统计特征 + 软异构角色特征
-- no_hetero：低维局部特征 + 三尾流动态图统计特征，但不输入软异构角色特征
-- no_graph：只用低维局部特征，不输入动态图统计和软异构角色特征
-
-运行示例：
-python sdwpf_hetero_dynamic_3wake_mlp.py \
-    --data_csv "C:\\Users\\Administrator\\Desktop\\project_root\\SDWPF\\sdwpf_2021_full.csv" \
-    --location_csv "C:\\Users\\Administrator\\Desktop\\project_root\\SDWPF\\sdwpf_turb_location_elevation.csv" \
-    --max_turbines 15 --epochs 80 --experiments full,no_hetero,no_graph --farm_loss_weight 0.10
-
-若要跑 134 台：--max_turbines 0
+注意：当前数据处理会前向填充功率并将其用作预测标签。正式评估原始
+观测标签时，必须另行保留有效标签掩码并重训，不能将本脚本的结果视为
+已完成该修正的实验。
 """
 
 import argparse
@@ -46,13 +33,9 @@ from torch.utils.data import DataLoader, TensorDataset
 class Config:
     data_csv: str = r"C:\Users\Administrator\Desktop\project_root\SDWPF\sdwpf_2021_full.csv"
     location_csv: str = r"C:\Users\Administrator\Desktop\project_root\SDWPF\sdwpf_turb_location_elevation.csv"
-#    experiments: str = "full,full_no_adapt,no_hetero_adapt,adaptive_only,no_hetero,no_graph,mtgnn"
-#    experiments: str = "full,no_hetero_adapt,adaptive_only,no_hetero,no_graph,mtgnn"
-#    out_dir: str = "sdwpf_soft_hetero_wake_gat_results"
-    experiments: str = "full,lstm,cnn_lstm,cnn_bilstm,transformer,dbfp_net,stgcn,agcrn,stv_pgnn_adapted"
     out_dir: str = "sdwpf_soft_hetero_wake_gat_results"
 
-       # 为了快速看结果，默认先用 15 台；设为 0 表示使用全部风机。
+    # 0 表示使用全部风机。
     max_turbines: int = 0
     rated_power_kw: float = 1500.0
     pred_horizon: int = 6 # 输出 1..pred_horizon 的多步预测结果
@@ -61,7 +44,7 @@ class Config:
     train_ratio: float = 0.70
     val_ratio: float = 0.15
 
-    # 三个物理尾流公式参数，保留你原代码的核心口径。
+    # 三种尾流启发交互分数的固定参数。
     rotor_D: float = 82.0
     ct: float = 0.8
     niayifar_k: float = 0.06
@@ -72,12 +55,8 @@ class Config:
     w_bpa: float = 2.0
     w_jimenez: float = 0.6
 
-    # 动态边阈值。以下硬异构阈值保留兼容旧函数，但新版 full 不再使用 one-hot 硬分类。
+    # 动态图的边筛选阈值。
     wake_edge_threshold: float = 0.08
-    wake_upstream_threshold: float = 0.30
-    wake_downstream_threshold: float = 0.30
-    wake_boundary_low: float = 0.10
-    wake_boundary_high: float = 0.30
 
     # 轻量版 TCN-Wake-GAT 训练参数。
     hidden_dim: int = 96
@@ -91,34 +70,21 @@ class Config:
     tcn_layers: int = 1
     tcn_kernel_size: int = 3
 
-    # Soft heterogeneous role gate strength in Wake-GAT attention.
-    # Only affects the full model. Larger values make the upstream-role × downstream-role gate stronger.
+    # 物理图注意力中的软角色门控强度。
     hetero_gate_alpha: float = 1.5
 
-    # Adaptive graph residual branch for the proposed full model.
-    # A_final is not explicitly mixed with the physical wake graph; instead,
-    # the full model uses two parallel spatial branches:
-    #   (1) physics-guided Wake-GAT branch based on the dynamic three-wake graph;
-    #   (2) learnable adaptive graph branch based on node embeddings.
-    # adaptive_graph_alpha controls how strongly the adaptive branch is injected.
-    # adaptive_graph_top_k=0 means using a dense adaptive graph; otherwise only the top-k
-    # adaptive neighbors of each target node are kept.
+    # 自适应图残差分支；top_k=0 使用稠密图。
     adaptive_graph_alpha: float = 0.3
     adaptive_graph_emb_dim: int = 32
     adaptive_graph_top_k: int =24
 
-    # Delay-aware physical wake propagation. The delay is estimated as
-    # downstream distance / wind speed and is encoded into edge features.
-    # In WakeGAT, neighbor messages can be gathered from a delayed hidden state
-    # within the historical window using fractional interpolation.
+    # 依据下风距离与风速估计延迟，并在历史窗口内插值取上游状态。
     use_wake_delay: int = 1
     sample_interval_minutes: float = 10.0
     wake_delay_speed_floor: float = 3.0
     wake_delay_max_steps: int = 2
 
-    # Learnable fusion between the physics-guided WakeGAT branch and the
-    # adaptive graph branch. When disabled, the old fixed residual fusion
-    # h = h_phys + alpha * h_adapt is used.
+    # 物理图与自适应图之间的可学习门控；0 表示固定残差融合。
     use_learnable_fusion: int = 1
 
     epochs: int = 50
@@ -133,7 +99,7 @@ class Config:
     seed: int = 1234
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
-    # 默认跑三组，方便直接看软异构动态图是否有提升。
+    # 主模型与当前选用的对比模型。
     experiments: str = "full,lstm,cnn_lstm,cnn_bilstm,transformer,dbfp_net,stgcn,agcrn,stv_pgnn_adapted"
 
 
@@ -288,7 +254,7 @@ def load_sdwpf_long(cfg: Config) -> pd.DataFrame:
     time_col = _resolve_column(df, ["Tmstamp", "Timestamp", "Date and time", "Time"])
     wspd_col = _resolve_column(df, ["Wspd", "Wind speed (m/s)"])
     wdir_col = _resolve_column(df, ["Wdir", "Wind direction (°)"])
-    ndir_col = _resolve_column(df, ["Ndir", "Nacelle position (°)"], required=False)
+    ndir_col = _resolve_column(df, ["Ndir", "Nacelle position (°)"])
     patv_col = _resolve_column(df, ["Patv", "Power (kW)"])
     day_col = _resolve_column(df, ["Day"], required=False)
 
@@ -318,7 +284,7 @@ def load_sdwpf_long(cfg: Config) -> pd.DataFrame:
         "turb_id": df[turb_col].astype(int),
         "ws": df[wspd_col].astype(float),
         "wd": np.mod(df[wdir_col].astype(float), 360.0),
-        "yaw": np.mod(df[ndir_col].astype(float), 360.0) if ndir_col else np.mod(df[wdir_col].astype(float), 360.0),
+        "yaw": np.mod(df[ndir_col].astype(float), 360.0),
         "power": df[patv_col].astype(float),
     })
 
@@ -405,7 +371,7 @@ def make_wide_matrices(df: pd.DataFrame, turbines: List[str]) -> Tuple[pd.Dateti
 # 4. 三物理尾流公式 + 异构动态类型
 # =========================
 
-def build_three_wake_matrices(x: np.ndarray, y: np.ndarray, wd_deg: float, yaw_all: np.ndarray, cfg: Config) -> Dict[str, np.ndarray]:
+def build_three_wake_matrices(x: np.ndarray, y: np.ndarray, wd_deg: float, yaw_misalignment_deg: np.ndarray, cfg: Config) -> Dict[str, np.ndarray]:
     """
     构建三种物理尾流矩阵 W[src, dst]：
     - niayifar: Jensen/Niayifar-like top-hat + Gaussian radial decay
@@ -415,21 +381,22 @@ def build_three_wake_matrices(x: np.ndarray, y: np.ndarray, wd_deg: float, yaw_a
     """
     x = np.asarray(x, dtype=np.float64)
     y = np.asarray(y, dtype=np.float64)
-    yaw = np.asarray(yaw_all, dtype=np.float64)
+    yaw_misalignment = np.asarray(yaw_misalignment_deg, dtype=np.float64)
     n = x.size
 
     flow = np.array([math.cos(math.radians(wd_deg)), math.sin(math.radians(wd_deg))], dtype=np.float64)
     dx = x[None, :] - x[:, None]   # src row -> dst col
     dy = y[None, :] - y[:, None]
     axial = dx * flow[0] + dy * flow[1]
-    dist2 = dx ** 2 + dy ** 2 + 1e-12
-    radial = np.sqrt(np.maximum(dist2 - axial ** 2, 0.0))
+    # Signed crosswind coordinate: retain its sign until yaw displacement is applied.
+    crosswind = -dx * flow[1] + dy * flow[0]
+    radial = np.abs(crosswind)
     mask = axial > 0.0
     np.fill_diagonal(mask, False)
 
     ct = float(cfg.ct)
     D = float(cfg.rotor_D)
-    yaw_rel = np.deg2rad(float(wd_deg) - yaw)[:, None]
+    yaw_rel = np.deg2rad(yaw_misalignment)[:, None]
     wake_align = np.abs(np.cos(yaw_rel))
 
     # (1) Niayifar/Jensen-like component
@@ -450,7 +417,7 @@ def build_three_wake_matrices(x: np.ndarray, y: np.ndarray, wd_deg: float, yaw_a
 
     # (3) Jimenez yaw deflection component
     delta = float(cfg.jimenez_kd) * np.maximum(axial, 0.0) * np.tan(yaw_rel)
-    radial_eff = np.abs(radial - delta)
+    radial_eff = np.abs(crosswind - delta)
     w_jim = c0 * np.exp(-0.5 * (radial_eff / sigma) ** 2)
 
     for w in (w_ni, w_bpa, w_jim):
@@ -494,8 +461,9 @@ def build_local_node_features(
     rated = max(float(cfg.rated_power_kw), 1e-6)
     ws_norm = np.clip(ws_t, 0.0, 40.0) / 20.0
     p_norm = np.clip(power_t / rated, 0.0, 1.5)
-    wd_rad = np.deg2rad(np.mod(wd_t, 360.0))
-    mis = np.deg2rad(angle_diff_deg(yaw_t, wd_t))
+    absolute_bearing = np.mod(yaw_t + wd_t, 360.0)
+    wd_rad = np.deg2rad(absolute_bearing)
+    mis = np.deg2rad(angle_diff_deg(yaw_t, absolute_bearing))
     return np.concatenate([
         ws_norm[:, None],
         p_norm[:, None],
@@ -614,9 +582,13 @@ def build_time_graph_sample(
         role = np.zeros((n, 4), dtype=np.float32)
         return x_node, nbr_idx, edge_attr, edge_mask, role
 
-    # 只在构图时把“风来自方向”转成“尾流传播方向”；局部风向输入仍使用原始 Wdir。
-    farm_wd = (circular_mean_deg(wd_t) + 180.0) % 360.0
-    w = build_three_wake_matrices(x, y, farm_wd, yaw_t, cfg)
+    # Wdir is relative to Ndir; first convert each turbine to an absolute
+    # clockwise-from-north wind-from bearing. x points east and y points north.
+    absolute_bearing = np.mod(yaw_t + wd_t, 360.0)
+    farm_from_bearing = circular_mean_deg(absolute_bearing)
+    farm_wd = (270.0 - farm_from_bearing) % 360.0  # downwind mathematical angle
+    yaw_misalignment = angle_diff_deg(yaw_t, absolute_bearing)
+    w = build_three_wake_matrices(x, y, farm_wd, yaw_misalignment, cfg)
     farm_ws = float(np.nanmean(ws_t[np.isfinite(ws_t)])) if np.isfinite(ws_t).any() else float(getattr(cfg, "wake_delay_speed_floor", 3.0))
     nbr_idx, edge_attr, edge_mask, role = build_topk_wake_neighbors(w, cfg, farm_ws=farm_ws)
     return x_node, nbr_idx, edge_attr, edge_mask, role
@@ -681,7 +653,7 @@ def build_dataset(cfg: Config, mode: str) -> Tuple[Dict[str, np.ndarray], Dict[s
     X = np.stack(X_list, axis=0).astype(np.float32)       # [S,L,N,6]
     Y = np.stack(Y_list, axis=0).astype(np.float32)       # [S,N,H]
     NBR = np.stack(NBR_list, axis=0).astype(np.int16)     # [S,N,K]
-    EDGE = np.stack(EDGE_list, axis=0).astype(np.float16) # [S,N,K,4]
+    EDGE = np.stack(EDGE_list, axis=0).astype(np.float16) # [S,N,K,7]
     MASK = np.stack(MASK_list, axis=0).astype(np.bool_)   # [S,N,K]
     ROLE = np.stack(ROLE_list, axis=0).astype(np.float32) # [S,N,4]
     target_times = np.array(T_list, dtype="datetime64[ns]")  # [S,H]
@@ -1887,9 +1859,9 @@ def main() -> None:
         json.dump(asdict(cfg), f, ensure_ascii=False, indent=2)
 
     print("=" * 80)
-    print("软异构动态尾流图 + 三尾流物理模型 + 轻量版 Wake-GAT")
+    print("TCN + 动态尾流启发图 + 延迟注意力 + 自适应图")
     print(f"device={cfg.device}, out_dir={cfg.out_dir}")
-    print("说明：full 为物理图+尾流延迟+软异构+自适应图+可学习融合完整模型；full_no_adapt/no_hetero_adapt/adaptive_only/no_hetero/no_graph 为关键消融；同时支持 LSTM、CNN-LSTM、Transformer、DBFP-Net、CNN-BiLSTM、STGCN、AGCRN、MTGNN 对比。输出 t+1..t+H 每一步结果；最终打印仅保留论文主表指标：RMSE/MAE/nRMSE/nMAE/WAPE/R2。")
+    print(f"实验：{cfg.experiments}；预测步长：1..{cfg.pred_horizon}")
     print("=" * 80)
 
     allowed = {"full", "full_no_adapt", "no_hetero_adapt", "adaptive_only", "no_hetero", "no_graph", "lstm", "cnn_lstm", "transformer", "dbfp_net", "cnn_bilstm", "stgcn", "agcrn", "mtgnn", "stv_pgnn_adapted"}

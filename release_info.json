@@ -1,5 +1,5 @@
 {
-  "status": "curated_pending_upload",
+  "status": "published",
   "comparison_runs": 27,
   "delay_window_runs": 18,
   "total_runs": 45,
@@ -9,7 +9,7 @@
     1234
   ],
   "other_comparison_seeds": [],
-  "source_sha256": "dfe51c281204fd9a2a0aba748bff0608435b3e4df311d9067cccf36eafe0f157",
+  "source_sha256": "21d5ef425246127c062f5895bf1d49b8f39f7c5ac164a699b7524470acc6cb61",
   "target_shape": [
     7517,
     134,
@@ -17,5 +17,7 @@
   ],
   "raw_valid_target_pairs": 3753533,
   "raw_complete_farm_pairs": 8541,
-  "release_created_at": "2026-11-23T15:28:41.914132"
+  "release_created_at": "2026-11-23T15:28:41.914132",
+  "source_sha256_shipped_snapshot": "f88422f58db073592f918bcd6ffd3ab5a938d49bba440bed2584bf81dce8f109",
+  "superseded_source_sha256": "dfe51c281204fd9a2a0aba748bff0608435b3e4df311d9067cccf36eafe0f157"
 }

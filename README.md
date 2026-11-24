@@ -18,3 +18,19 @@ print(pred.shape, raw.shape, valid.sum())
 Raw SDWPF data and generated feature caches are excluded. Obtain the source data from https://doi.org/10.6084/m9.figshare.24798654 and rebuild with `code/as_run` and `tools`. `splits/definitions.json` records five overlapping target timestamps at each chronological split boundary; the split is not purged. The retained time axis has 59 non-10-minute gaps.
 
 **Not in the supplied archive:** run-level files for the paper's ablation variants (Table 6) and wake-coefficient sensitivity scan (Table 9). Those studies cannot be independently reproduced from this folder. The GitHub repository is https://github.com/Sleeping888/DA-PG-SHWATCN; verify its contents and create an immutable tag before referring to the package as an archived paper release.
+
+## Archive note
+
+The three `code/as_run/*/source_snapshot.py` files are the training script behind every reported
+number. Earlier copies in this package were taken from an obsolete working file; the copies now
+shipped are the corrected script. They build the absolute inflow bearing from `Ndir` and the
+relative `Wdir`, take the farm inflow bearing as the circular mean of the turbine-level bearings,
+and keep the sign of the crosswind offset before applying the yaw displacement. The
+`source_sha256` value in each `plan.json` was updated to the hash of the shipped snapshot so that
+`runner.py` verifies against it, and `release_info.json` records both the shipped hash and the
+hash of the pre-redaction script.
+
+Two variants that the code supports are not reported in the paper: `no_hetero` (physical wake
+graph without soft-role gating and without the adaptive branch) and `mtgnn`. The paper's
+`w/o Delay` and `w/o Farm Loss` columns are not separate `--experiments` modes; they are the full
+model run with `--use_wake_delay 0` and with `--farm_loss_weight 0` respectively.
