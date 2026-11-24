@@ -1,3 +1,6 @@
-# Path redaction for double-anonymized review
+# Path redaction
 
-The public upload copy replaces an identifying local directory token with `project_root` in text configuration files, source snapshots, logs, and checkpoint metadata. Model weights, numerical settings, predictions, and split indices are preserved. Checkpoint weight tensors were compared elementwise before and after redaction. Original experiment-file SHA-256 values retained in run metadata refer to the source archive and therefore differ from the redacted public copies. Reconfigure `project_root` paths to local dataset locations before rerunning.
+Text configuration files, source snapshots, logs and checkpoint metadata replace an identifying
+local directory name with `project_root`, so that the copies can be shared during double-anonymized
+review. Model weights, numerical settings, predictions and split indices are unchanged. Set the
+`project_root` paths to your local dataset locations before rerunning.

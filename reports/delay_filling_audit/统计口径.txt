@@ -12,6 +12,6 @@
 }
 空值前向填充比例（字段单元）：{"Wspd": {"total_cells": 6715544, "filled_cells": 25995, "filled_percent": 0.3870870327109762, "leading_zero_filled_cells": 0}, "Wdir": {"total_cells": 6715544, "filled_cells": 25930, "filled_percent": 0.3861191289938685, "leading_zero_filled_cells": 0}, "Ndir": {"total_cells": 6715544, "filled_cells": 25930, "filled_percent": 0.3861191289938685, "leading_zero_filled_cells": 0}, "Patv": {"total_cells": 6715544, "filled_cells": 1882315, "filled_percent": 28.029225927192197, "leading_zero_filled_cells": 0}}
 当前固定L=3、延迟cap=2、步长10 min；没有按事件动态启用更长历史窗口。
-纯因延迟缺失而填零的机制不存在；延迟过长时采用截断而非NaN填充。TCN卷积左补零与这两者不同。
+延迟过长时按上限截断，不引入 NaN 填充；TCN 卷积的左补零与此无关。
 原时钟存在非10min间隔；按数组索引可检索不代表按实际物理时钟同样可检索。详见timestamp_retrieval_gt20min_edges。
-全部统计来自当前对比实验缓存和同版原始数据重放，不套用修正连续时钟研究中的22.08%数字。
+全部统计来自当前对比实验缓存与同版原始数据重放。
